@@ -1,0 +1,3 @@
+ilsp/Meltemi-7B-Instruct-v1.5
+ilsp/Llama-Krikri-8B-Instruct
+Qwen/Qwen3-0.6B

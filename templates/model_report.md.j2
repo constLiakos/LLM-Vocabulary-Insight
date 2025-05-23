@@ -1,0 +1,62 @@
+# {{ model_name }} - Vocabulary Analysis Report
+
+## Overview
+
+This report provides a comprehensive analysis of the tokenizer vocabulary for the **{{ model_name }}** model.
+
+## Vocabulary Statistics
+
+| Metric | Value | Percentage |
+|--------|-------|------------|
+| **Total Vocabulary Size** | {{ stats.vocab_all_size | number_format }} | 100% |
+| **Greek Tokens** | {{ stats.vocab_greek_size | number_format }} | {{ stats.vocabulary_greek_percentage }} |
+| **Latin Tokens** | {{ stats.vocab_latin_size | number_format }} | {{ stats.vocabulary_latin_percentage }} |
+
+## Greek Character Analysis
+
+{% if stats.stats_greek %}
+### Character Distribution
+
+
+### Greek Statistics Summary
+- **Total Greek Characters**: {{ stats.stats_greek.total_characters }}
+- **Unique Characters**: {{ stats.stats_greek.unique_characters }}
+- **Most Common**: `{{ stats.stats_greek.most_common_char }}` ({{ stats.stats_greek.most_common_count }} occurrences)
+{% endif %}
+
+## Sample Tokens
+
+### Greek Tokens (First 20)
+```
+{% for token_id, token in greek_sample %}
+{{ token_id }}: {{ token }}
+{% endfor %}
+```
+
+### Latin Tokens (First 20)
+```
+{% for token_id, token in latin_sample %}
+{{ token_id }}: {{ token }}
+{% endfor %}
+```
+
+## Language Distribution Chart
+
+```
+Greek:  {{ "█" * (stats.vocab_greek_size // (stats.vocab_all_size // 50)) }}{{ " " * (50 - (stats.vocab_greek_size // (stats.vocab_all_size // 50))) }} {{ stats.vocabulary_greek_percentage }}
+Latin:  {{ "█" * (stats.vocab_latin_size // (stats.vocab_all_size // 50)) }}{{ " " * (50 - (stats.vocab_latin_size // (stats.vocab_all_size // 50))) }} {{ stats.vocabulary_latin_percentage }}
+Other:  {{ "█" * ((stats.vocab_all_size - stats.vocab_greek_size - stats.vocab_latin_size) // (stats.vocab_all_size // 50)) }} {{ "%.2f"|format(((stats.vocab_all_size - stats.vocab_greek_size - stats.vocab_latin_size) / stats.vocab_all_size) * 100) }}%
+```
+
+## Files Generated
+
+- 📄 [All Tokens (Text)]({{ files.tokens_all_output }})
+- 📄 [All Tokens (JSON)]({{ files.tokens_all_json_output }})
+- 🇬🇷 [Greek Tokens (Text)]({{ files.tokens_greek_output }})
+- 🇬🇷 [Greek Tokens (JSON)]({{ files.tokens_greek_json_output }})
+- 🇮🇹 [Latin Tokens (Text)]({{ files.tokens_latin_output }})
+- 🇮🇹 [Latin Tokens (JSON)]({{ files.tokens_latin_json_output }})
+- 📊 [Statistics (JSON)]({{ files.tokens_statistics }})
+
+---
+*Report generated on {{ generation_date }} using vocabulary_extractor*

@@ -1,0 +1,109 @@
+# LLM Vocabulary Insight Report
+
+[ℹ️ Project Info](README.dev.md)
+
+## 🎯 Overview
+
+This report presents a comprehensive analysis of Greek language tokenization capabilities across **{{ overall_stats.total_models }}** Large Language Models (LLMs). The analysis evaluates how effectively different transformer-based models handle Greek text through their tokenizer vocabularies, providing insights into Greek language support, character coverage, and tokenization efficiency.
+
+## Overall Statistics
+
+| Metric | Value |
+|--------|-------|
+| **Total Models Analyzed** | {{ overall_stats.total_models }} |
+| **Combined Vocabulary Size** | {{ overall_stats.total_vocab_size | number_format }} tokens |
+| **Average Vocabulary Size** | {{ overall_stats.avg_vocab_size | number_format }} tokens |
+| **Total Greek Tokens** | {{ overall_stats.total_greek_tokens | number_format }} ({{ "%.2f"|format(overall_stats.avg_greek_percentage) }}%) |
+| **Total Latin Tokens** | {{ overall_stats.total_latin_tokens | number_format }} ({{ "%.2f"|format(overall_stats.avg_latin_percentage) }}%) |
+
+## Model Performance Rankings
+
+### Best Greek Support
+🥇 **{{ overall_stats.best_greek_model[0] }}** - {{ "%.2f"|format(overall_stats.best_greek_model[1]) }}% Greek tokens
+
+### Lowest Greek Support
+📉 **{{ overall_stats.worst_greek_model[0] }}** - {{ "%.2f"|format(overall_stats.worst_greek_model[1]) }}% Greek tokens
+
+## Greek Performance Rankings
+
+### By Token Count (Absolute Numbers)
+
+| Rank | Model | Greek Tokens | Total Vocabulary | Percentage |
+|------|-------|--------------|------------------|------------|
+{% for model in models | sort(attribute='stats.vocab_greek_size', reverse=true) -%}
+| {{ loop.index }} | **{{ model.model_name }}** | {{ model.stats.vocab_greek_size | number_format }} | {{ model.stats.vocab_all_size | number_format }} | {{ "%.2f"|format(model.stats.greek_percentage_raw) }}% |
+{% endfor %}
+
+### By Percentage (Relative Performance)
+
+| Rank | Model | Percentage | Greek Tokens | Total Vocabulary |
+|------|-------|------------|--------------|------------------|
+{% for model in models | sort(attribute='stats.greek_percentage_raw', reverse=true) -%}
+| {{ loop.index }} | **{{ model.model_name }}** | {{ "%.2f"|format(model.stats.greek_percentage_raw) }}% | {{ model.stats.vocab_greek_size | number_format }} | {{ model.stats.vocab_all_size | number_format }} |
+{% endfor %}
+
+## Individual Model Analysis
+
+{% for model in models %}
+### {{ model.model_name }}
+
+| Metric | Value | Percentage |
+|--------|-------|------------|
+| **Total Vocabulary** | {{ model.stats.vocab_all_size | number_format }} | 100% |
+| **Greek Tokens** | {{ model.stats.vocab_greek_size | number_format }} | {{ model.stats.vocabulary_greek_percentage }} |
+| **Latin Tokens** | {{ model.stats.vocab_latin_size | number_format }} | {{ model.stats.vocabulary_latin_percentage }} |
+
+#### Language Distribution
+```
+Greek:  {{ "█" * (model.stats.vocab_greek_size // (model.stats.vocab_all_size // 30)) }}{{ " " * (30 - (model.stats.vocab_greek_size // (model.stats.vocab_all_size // 30))) }} {{ model.stats.vocabulary_greek_percentage }}
+Latin:  {{ "█" * (model.stats.vocab_latin_size // (model.stats.vocab_all_size // 30)) }}{{ " " * (30 - (model.stats.vocab_latin_size // (model.stats.vocab_all_size // 30))) }} {{ model.stats.vocabulary_latin_percentage }}
+```
+
+{% if model.stats.stats_greek %}
+#### Greek Character Statistics
+- **Total Greek Characters**: {{ model.stats.stats_greek.total_characters }}
+- **Unique Characters**: {{ model.stats.stats_greek.unique_characters }}
+- **Most Common**: `{{ model.stats.stats_greek.most_common_char }}` ({{ model.stats.stats_greek.most_common_count }} times)
+{% endif %}
+
+#### Sample Tokens
+**Greek**: {% for token_id, token in (model.greek_tokens.items() | list)[:5] %}`{{ token }}`{% if not loop.last %}, {% endif %}{% endfor %}...
+
+**Latin**: {% for token_id, token in (model.latin_tokens.items() | list)[:5] %}`{{ token }}`{% if not loop.last %}, {% endif %}{% endfor %}...
+
+---
+{% endfor %}
+
+## Comparative Analysis
+
+### Vocabulary Size Distribution
+{% for model in models | sort(attribute='stats.vocab_all_size', reverse=true) %}
+{{ model.model_name }}: {{ "█" * (model.stats.vocab_all_size // (overall_stats.total_vocab_size // 50)) }} {{ model.stats.vocab_all_size | number_format }}
+{% endfor %}
+
+### Greek Support Ranking
+{% for model in models | sort(attribute='stats.vocab_greek_size', reverse=true) %}
+{{ loop.index }}. **{{ model.model_name }}**: {{ model.stats.vocabulary_greek_percentage }} ({{ model.stats.vocab_greek_size | number_format }} tokens)
+{% endfor %}
+
+### Latin Support Ranking
+{% for model in models | sort(attribute='stats.vocab_latin_size', reverse=true) %}
+{{ loop.index }}. **{{ model.model_name }}**: {{ model.stats.vocabulary_latin_percentage }} ({{ model.stats.vocab_latin_size | number_format }} tokens)
+{% endfor %}
+
+## Generated Files by Model
+
+{% for model in models %}
+### {{ model.model_name }}
+- 📄 [All Tokens (Text)]({{ model.files.tokens_all_output }})
+- 📄 [All Tokens (JSON)]({{ model.files.tokens_all_json_output }})
+- 🇬🇷 [Greek Tokens (Text)]({{ model.files.tokens_greek_output }})
+- 🇬🇷 [Greek Tokens (JSON)]({{ model.files.tokens_greek_json_output }})
+- 🇮🇹 [Latin Tokens (Text)]({{ model.files.tokens_latin_output }})
+- 🇮🇹 [Latin Tokens (JSON)]({{ model.files.tokens_latin_json_output }})
+- 📊 [Statistics (JSON)]({{ model.files.tokens_statistics }})
+
+{% endfor %}
+
+---
+*Summary report generated on {{ generation_date }} analyzing {{ overall_stats.total_models }} models*
