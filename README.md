@@ -18,11 +18,25 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 
 ## Model Performance Rankings
 
-### Best Greek Support
-🥇 **ilsp/Meltemi-7B-Instruct-v1.5** - 45.89% Greek tokens
+### 🇬🇷 Greek Language Support
 
-### Lowest Greek Support
-📉 **microsoft/phi-4** - 0.04% Greek tokens
+#### By Absolute Token Count
+🥇 **Most Tokens**: ilsp/Meltemi-7B-Instruct-v1.5 - 28,162 tokens (45.89%)  
+📉 **Fewest Tokens**: ibm-granite/granite-4.0-tiny-preview - 42 tokens (0.09%)
+
+#### By Percentage Coverage
+🥇 **Highest %**: ilsp/Meltemi-7B-Instruct-v1.5 - 45.89% (28,162 tokens)  
+📉 **Lowest %**: microsoft/phi-4 - 0.04% (44 tokens)
+
+### 🇮🇹 Latin Language Support
+
+#### By Absolute Token Count
+🥇 **Most Tokens**: unsloth/gemma-2-2b-it - 184,588 tokens (72.10%)  
+📉 **Fewest Tokens**: unsloth/Phi-3.5-mini-instruct - 25,624 tokens (80.08%)
+
+#### By Percentage Coverage
+🥇 **Highest %**: unsloth/SmolLM2-1.7B-Instruct - 95.94% (47,156 tokens)  
+📉 **Lowest %**: ilsp/Meltemi-7B-Instruct-v1.5 - 42.28% (25,948 tokens)
 
 ## Greek Performance Rankings
 
@@ -95,6 +109,77 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | 28 | **microsoft/phi-4** | 0.04% | 44 | 100,352 |
 | 29 | **microsoft/Phi-4-reasoning-plus** | 0.04% | 44 | 100,352 |
 
+
+## Latin Performance Rankings
+
+### By Token Count (Absolute Numbers)
+
+| Rank | Model | Latin Tokens | Total Vocabulary | Percentage |
+|------|-------|--------------|------------------|------------|
+| 1 | **unsloth/gemma-2-2b-it** | 184,588 | 256,000 | 72.10% |
+| 2 | **unsloth/gemma-3-4b-it** | 151,739 | 262,144 | 57.88% |
+| 3 | **ilsp/Llama-Krikri-8B-Instruct** | 96,699 | 149,248 | 64.79% |
+| 4 | **unsloth/Llama-3.2-3B-Instruct** | 96,687 | 128,000 | 75.54% |
+| 5 | **unsloth/llama-3-8b** | 96,687 | 128,000 | 75.54% |
+| 6 | **unsloth/Llama-3.3-70B-Instruct** | 96,687 | 128,000 | 75.54% |
+| 7 | **microsoft/bitnet-b1.58-2B-4T** | 96,687 | 128,000 | 75.54% |
+| 8 | **Qwen/Qwen2.5-1.5B-Instruct** | 93,859 | 151,643 | 61.89% |
+| 9 | **Qwen/Qwen3-0.6B** | 93,859 | 151,643 | 61.89% |
+| 10 | **Qwen/Qwen3-32B** | 93,859 | 151,643 | 61.89% |
+| 11 | **Qwen/Qwen2.5-Omni-3B** | 93,859 | 151,643 | 61.89% |
+| 12 | **XiaomiMiMo/MiMo-7B-RL** | 93,859 | 151,643 | 61.89% |
+| 13 | **kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit** | 91,179 | 128,000 | 71.23% |
+| 14 | **Xenova/gpt-4** | 89,643 | 100,263 | 89.41% |
+| 15 | **Xenova/text-embedding-ada-002** | 89,643 | 100,261 | 89.41% |
+| 16 | **Xenova/gpt-3.5-turbo-16k** | 89,643 | 100,261 | 89.41% |
+| 17 | **microsoft/phi-4** | 89,643 | 100,352 | 89.33% |
+| 18 | **microsoft/Phi-4-reasoning-plus** | 89,643 | 100,352 | 89.33% |
+| 19 | **unsloth/DeepSeek-R1** | 71,454 | 128,000 | 55.82% |
+| 20 | **unsloth/DeepSeek-Prover-V2-671B** | 71,454 | 128,000 | 55.82% |
+| 21 | **tngtech/DeepSeek-R1T-Chimera** | 71,454 | 128,000 | 55.82% |
+| 22 | **deepseek-ai/DeepSeek-V2.5-1210** | 70,489 | 100,000 | 70.49% |
+| 23 | **unsloth/SmolLM2-1.7B-Instruct** | 47,156 | 49,152 | 95.94% |
+| 24 | **ibm-granite/granite-4.0-tiny-preview** | 40,302 | 49,152 | 81.99% |
+| 25 | **ibm-granite/granite-3.3-8b-instruct** | 40,302 | 49,152 | 81.99% |
+| 26 | **ilsp/Meltemi-7B-Instruct-v1.5** | 25,948 | 61,366 | 42.28% |
+| 27 | **unsloth/mistral-7b-v0.3** | 25,723 | 32,768 | 78.50% |
+| 28 | **unsloth/Mistral-Small-Instruct-2409** | 25,723 | 32,768 | 78.50% |
+| 29 | **unsloth/Phi-3.5-mini-instruct** | 25,624 | 32,000 | 80.08% |
+
+
+### By Percentage (Relative Performance)
+
+| Rank | Model | Percentage | Latin Tokens | Total Vocabulary |
+|------|-------|------------|--------------|------------------|
+| 1 | **unsloth/SmolLM2-1.7B-Instruct** | 95.94% | 47,156 | 49,152 |
+| 2 | **Xenova/text-embedding-ada-002** | 89.41% | 89,643 | 100,261 |
+| 3 | **Xenova/gpt-3.5-turbo-16k** | 89.41% | 89,643 | 100,261 |
+| 4 | **Xenova/gpt-4** | 89.41% | 89,643 | 100,263 |
+| 5 | **microsoft/phi-4** | 89.33% | 89,643 | 100,352 |
+| 6 | **microsoft/Phi-4-reasoning-plus** | 89.33% | 89,643 | 100,352 |
+| 7 | **ibm-granite/granite-4.0-tiny-preview** | 81.99% | 40,302 | 49,152 |
+| 8 | **ibm-granite/granite-3.3-8b-instruct** | 81.99% | 40,302 | 49,152 |
+| 9 | **unsloth/Phi-3.5-mini-instruct** | 80.08% | 25,624 | 32,000 |
+| 10 | **unsloth/mistral-7b-v0.3** | 78.50% | 25,723 | 32,768 |
+| 11 | **unsloth/Mistral-Small-Instruct-2409** | 78.50% | 25,723 | 32,768 |
+| 12 | **unsloth/Llama-3.2-3B-Instruct** | 75.54% | 96,687 | 128,000 |
+| 13 | **unsloth/llama-3-8b** | 75.54% | 96,687 | 128,000 |
+| 14 | **unsloth/Llama-3.3-70B-Instruct** | 75.54% | 96,687 | 128,000 |
+| 15 | **microsoft/bitnet-b1.58-2B-4T** | 75.54% | 96,687 | 128,000 |
+| 16 | **unsloth/gemma-2-2b-it** | 72.10% | 184,588 | 256,000 |
+| 17 | **kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit** | 71.23% | 91,179 | 128,000 |
+| 18 | **deepseek-ai/DeepSeek-V2.5-1210** | 70.49% | 70,489 | 100,000 |
+| 19 | **ilsp/Llama-Krikri-8B-Instruct** | 64.79% | 96,699 | 149,248 |
+| 20 | **Qwen/Qwen2.5-1.5B-Instruct** | 61.89% | 93,859 | 151,643 |
+| 21 | **Qwen/Qwen3-0.6B** | 61.89% | 93,859 | 151,643 |
+| 22 | **Qwen/Qwen3-32B** | 61.89% | 93,859 | 151,643 |
+| 23 | **Qwen/Qwen2.5-Omni-3B** | 61.89% | 93,859 | 151,643 |
+| 24 | **XiaomiMiMo/MiMo-7B-RL** | 61.89% | 93,859 | 151,643 |
+| 25 | **unsloth/gemma-3-4b-it** | 57.88% | 151,739 | 262,144 |
+| 26 | **unsloth/DeepSeek-R1** | 55.82% | 71,454 | 128,000 |
+| 27 | **unsloth/DeepSeek-Prover-V2-671B** | 55.82% | 71,454 | 128,000 |
+| 28 | **tngtech/DeepSeek-R1T-Chimera** | 55.82% | 71,454 | 128,000 |
+| 29 | **ilsp/Meltemi-7B-Instruct-v1.5** | 42.28% | 25,948 | 61,366 |
 
 
 ## Comparative Analysis
@@ -256,26 +341,6 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 |  |  | microsoft/Phi-4-reasoning-plus (0.04%) |
 |  |  | ibm-granite/granite-4.0-tiny-preview (0.09%) |
 |  |  | ibm-granite/granite-3.3-8b-instruct (0.09%) |
-
-
-### Performance Categories
-
-| High Greek Support (>1%) | Medium Greek Support (0.1-1%) | Low Greek Support (<0.1%) |
-|---------------------------|--------------------------------|---------------------------|
-| unsloth/Llama-3.2-3B-Instruct (1.08%) | unsloth/mistral-7b-v0.3 (0.18%) | Xenova/gpt-4 (0.04%) |
-| unsloth/llama-3-8b (1.08%) | unsloth/Mistral-Small-Instruct-2409 (0.18%) | Xenova/text-embedding-ada-002 (0.04%) |
-| unsloth/Llama-3.3-70B-Instruct (1.08%) | unsloth/SmolLM2-1.7B-Instruct (0.12%) | Xenova/gpt-3.5-turbo-16k (0.04%) |
-| kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit (2.20%) | unsloth/gemma-2-2b-it (0.48%) | Qwen/Qwen2.5-1.5B-Instruct (0.08%) |
-| ilsp/Meltemi-7B-Instruct-v1.5 (45.89%) | unsloth/gemma-3-4b-it (0.54%) | Qwen/Qwen3-0.6B (0.08%) |
-| ilsp/Llama-Krikri-8B-Instruct (14.88%) | unsloth/DeepSeek-R1 (0.49%) | Qwen/Qwen3-32B (0.08%) |
-| microsoft/bitnet-b1.58-2B-4T (1.08%) | unsloth/DeepSeek-Prover-V2-671B (0.49%) | Qwen/Qwen2.5-Omni-3B (0.08%) |
-|  | tngtech/DeepSeek-R1T-Chimera (0.49%) | deepseek-ai/DeepSeek-V2.5-1210 (0.09%) |
-|  | unsloth/Phi-3.5-mini-instruct (0.20%) | XiaomiMiMo/MiMo-7B-RL (0.08%) |
-|  |  | microsoft/phi-4 (0.04%) |
-|  |  | microsoft/Phi-4-reasoning-plus (0.04%) |
-|  |  | ibm-granite/granite-4.0-tiny-preview (0.09%) |
-|  |  | ibm-granite/granite-3.3-8b-instruct (0.09%) |
-
 
 
 ## Individual Model Analysis
@@ -1094,299 +1159,5 @@ Latin:  ████████████████████████
 ---
 
 
-## Generated Files by Model
-
-
-### unsloth/Llama-3.2-3B-Instruct
-- 📄 [All Tokens (Text)](output/generated/unsloth/Llama-3.2-3B-Instruct/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/unsloth/Llama-3.2-3B-Instruct/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/unsloth/Llama-3.2-3B-Instruct/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/unsloth/Llama-3.2-3B-Instruct/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/unsloth/Llama-3.2-3B-Instruct/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/unsloth/Llama-3.2-3B-Instruct/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/unsloth/Llama-3.2-3B-Instruct/tokens-statistics.json)
-
-
-### unsloth/llama-3-8b
-- 📄 [All Tokens (Text)](output/generated/unsloth/llama-3-8b/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/unsloth/llama-3-8b/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/unsloth/llama-3-8b/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/unsloth/llama-3-8b/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/unsloth/llama-3-8b/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/unsloth/llama-3-8b/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/unsloth/llama-3-8b/tokens-statistics.json)
-
-
-### unsloth/Llama-3.3-70B-Instruct
-- 📄 [All Tokens (Text)](output/generated/unsloth/Llama-3.3-70B-Instruct/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/unsloth/Llama-3.3-70B-Instruct/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/unsloth/Llama-3.3-70B-Instruct/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/unsloth/Llama-3.3-70B-Instruct/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/unsloth/Llama-3.3-70B-Instruct/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/unsloth/Llama-3.3-70B-Instruct/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/unsloth/Llama-3.3-70B-Instruct/tokens-statistics.json)
-
-
-### kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit
-- 📄 [All Tokens (Text)](output/generated/kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit/tokens-statistics.json)
-
-
-### ilsp/Meltemi-7B-Instruct-v1.5
-- 📄 [All Tokens (Text)](output/generated/ilsp/Meltemi-7B-Instruct-v1.5/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/ilsp/Meltemi-7B-Instruct-v1.5/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/ilsp/Meltemi-7B-Instruct-v1.5/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/ilsp/Meltemi-7B-Instruct-v1.5/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/ilsp/Meltemi-7B-Instruct-v1.5/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/ilsp/Meltemi-7B-Instruct-v1.5/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/ilsp/Meltemi-7B-Instruct-v1.5/tokens-statistics.json)
-
-
-### ilsp/Llama-Krikri-8B-Instruct
-- 📄 [All Tokens (Text)](output/generated/ilsp/Llama-Krikri-8B-Instruct/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/ilsp/Llama-Krikri-8B-Instruct/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/ilsp/Llama-Krikri-8B-Instruct/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/ilsp/Llama-Krikri-8B-Instruct/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/ilsp/Llama-Krikri-8B-Instruct/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/ilsp/Llama-Krikri-8B-Instruct/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/ilsp/Llama-Krikri-8B-Instruct/tokens-statistics.json)
-
-
-### unsloth/mistral-7b-v0.3
-- 📄 [All Tokens (Text)](output/generated/unsloth/mistral-7b-v0.3/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/unsloth/mistral-7b-v0.3/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/unsloth/mistral-7b-v0.3/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/unsloth/mistral-7b-v0.3/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/unsloth/mistral-7b-v0.3/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/unsloth/mistral-7b-v0.3/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/unsloth/mistral-7b-v0.3/tokens-statistics.json)
-
-
-### unsloth/Mistral-Small-Instruct-2409
-- 📄 [All Tokens (Text)](output/generated/unsloth/Mistral-Small-Instruct-2409/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/unsloth/Mistral-Small-Instruct-2409/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/unsloth/Mistral-Small-Instruct-2409/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/unsloth/Mistral-Small-Instruct-2409/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/unsloth/Mistral-Small-Instruct-2409/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/unsloth/Mistral-Small-Instruct-2409/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/unsloth/Mistral-Small-Instruct-2409/tokens-statistics.json)
-
-
-### unsloth/SmolLM2-1.7B-Instruct
-- 📄 [All Tokens (Text)](output/generated/unsloth/SmolLM2-1.7B-Instruct/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/unsloth/SmolLM2-1.7B-Instruct/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/unsloth/SmolLM2-1.7B-Instruct/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/unsloth/SmolLM2-1.7B-Instruct/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/unsloth/SmolLM2-1.7B-Instruct/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/unsloth/SmolLM2-1.7B-Instruct/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/unsloth/SmolLM2-1.7B-Instruct/tokens-statistics.json)
-
-
-### Xenova/gpt-4
-- 📄 [All Tokens (Text)](output/generated/Xenova/gpt-4/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/Xenova/gpt-4/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/Xenova/gpt-4/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/Xenova/gpt-4/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/Xenova/gpt-4/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/Xenova/gpt-4/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/Xenova/gpt-4/tokens-statistics.json)
-
-
-### Xenova/text-embedding-ada-002
-- 📄 [All Tokens (Text)](output/generated/Xenova/text-embedding-ada-002/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/Xenova/text-embedding-ada-002/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/Xenova/text-embedding-ada-002/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/Xenova/text-embedding-ada-002/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/Xenova/text-embedding-ada-002/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/Xenova/text-embedding-ada-002/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/Xenova/text-embedding-ada-002/tokens-statistics.json)
-
-
-### Xenova/gpt-3.5-turbo-16k
-- 📄 [All Tokens (Text)](output/generated/Xenova/gpt-3.5-turbo-16k/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/Xenova/gpt-3.5-turbo-16k/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/Xenova/gpt-3.5-turbo-16k/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/Xenova/gpt-3.5-turbo-16k/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/Xenova/gpt-3.5-turbo-16k/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/Xenova/gpt-3.5-turbo-16k/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/Xenova/gpt-3.5-turbo-16k/tokens-statistics.json)
-
-
-### Qwen/Qwen2.5-1.5B-Instruct
-- 📄 [All Tokens (Text)](output/generated/Qwen/Qwen2.5-1.5B-Instruct/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/Qwen/Qwen2.5-1.5B-Instruct/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/Qwen/Qwen2.5-1.5B-Instruct/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/Qwen/Qwen2.5-1.5B-Instruct/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/Qwen/Qwen2.5-1.5B-Instruct/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/Qwen/Qwen2.5-1.5B-Instruct/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/Qwen/Qwen2.5-1.5B-Instruct/tokens-statistics.json)
-
-
-### Qwen/Qwen3-0.6B
-- 📄 [All Tokens (Text)](output/generated/Qwen/Qwen3-0.6B/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/Qwen/Qwen3-0.6B/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/Qwen/Qwen3-0.6B/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/Qwen/Qwen3-0.6B/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/Qwen/Qwen3-0.6B/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/Qwen/Qwen3-0.6B/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/Qwen/Qwen3-0.6B/tokens-statistics.json)
-
-
-### Qwen/Qwen3-32B
-- 📄 [All Tokens (Text)](output/generated/Qwen/Qwen3-32B/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/Qwen/Qwen3-32B/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/Qwen/Qwen3-32B/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/Qwen/Qwen3-32B/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/Qwen/Qwen3-32B/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/Qwen/Qwen3-32B/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/Qwen/Qwen3-32B/tokens-statistics.json)
-
-
-### Qwen/Qwen2.5-Omni-3B
-- 📄 [All Tokens (Text)](output/generated/Qwen/Qwen2.5-Omni-3B/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/Qwen/Qwen2.5-Omni-3B/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/Qwen/Qwen2.5-Omni-3B/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/Qwen/Qwen2.5-Omni-3B/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/Qwen/Qwen2.5-Omni-3B/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/Qwen/Qwen2.5-Omni-3B/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/Qwen/Qwen2.5-Omni-3B/tokens-statistics.json)
-
-
-### unsloth/gemma-2-2b-it
-- 📄 [All Tokens (Text)](output/generated/unsloth/gemma-2-2b-it/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/unsloth/gemma-2-2b-it/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/unsloth/gemma-2-2b-it/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/unsloth/gemma-2-2b-it/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/unsloth/gemma-2-2b-it/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/unsloth/gemma-2-2b-it/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/unsloth/gemma-2-2b-it/tokens-statistics.json)
-
-
-### unsloth/gemma-3-4b-it
-- 📄 [All Tokens (Text)](output/generated/unsloth/gemma-3-4b-it/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/unsloth/gemma-3-4b-it/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/unsloth/gemma-3-4b-it/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/unsloth/gemma-3-4b-it/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/unsloth/gemma-3-4b-it/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/unsloth/gemma-3-4b-it/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/unsloth/gemma-3-4b-it/tokens-statistics.json)
-
-
-### deepseek-ai/DeepSeek-V2.5-1210
-- 📄 [All Tokens (Text)](output/generated/deepseek-ai/DeepSeek-V2.5-1210/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/deepseek-ai/DeepSeek-V2.5-1210/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/deepseek-ai/DeepSeek-V2.5-1210/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/deepseek-ai/DeepSeek-V2.5-1210/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/deepseek-ai/DeepSeek-V2.5-1210/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/deepseek-ai/DeepSeek-V2.5-1210/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/deepseek-ai/DeepSeek-V2.5-1210/tokens-statistics.json)
-
-
-### unsloth/DeepSeek-R1
-- 📄 [All Tokens (Text)](output/generated/unsloth/DeepSeek-R1/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/unsloth/DeepSeek-R1/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/unsloth/DeepSeek-R1/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/unsloth/DeepSeek-R1/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/unsloth/DeepSeek-R1/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/unsloth/DeepSeek-R1/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/unsloth/DeepSeek-R1/tokens-statistics.json)
-
-
-### unsloth/DeepSeek-Prover-V2-671B
-- 📄 [All Tokens (Text)](output/generated/unsloth/DeepSeek-Prover-V2-671B/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/unsloth/DeepSeek-Prover-V2-671B/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/unsloth/DeepSeek-Prover-V2-671B/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/unsloth/DeepSeek-Prover-V2-671B/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/unsloth/DeepSeek-Prover-V2-671B/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/unsloth/DeepSeek-Prover-V2-671B/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/unsloth/DeepSeek-Prover-V2-671B/tokens-statistics.json)
-
-
-### tngtech/DeepSeek-R1T-Chimera
-- 📄 [All Tokens (Text)](output/generated/tngtech/DeepSeek-R1T-Chimera/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/tngtech/DeepSeek-R1T-Chimera/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/tngtech/DeepSeek-R1T-Chimera/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/tngtech/DeepSeek-R1T-Chimera/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/tngtech/DeepSeek-R1T-Chimera/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/tngtech/DeepSeek-R1T-Chimera/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/tngtech/DeepSeek-R1T-Chimera/tokens-statistics.json)
-
-
-### XiaomiMiMo/MiMo-7B-RL
-- 📄 [All Tokens (Text)](output/generated/XiaomiMiMo/MiMo-7B-RL/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/XiaomiMiMo/MiMo-7B-RL/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/XiaomiMiMo/MiMo-7B-RL/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/XiaomiMiMo/MiMo-7B-RL/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/XiaomiMiMo/MiMo-7B-RL/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/XiaomiMiMo/MiMo-7B-RL/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/XiaomiMiMo/MiMo-7B-RL/tokens-statistics.json)
-
-
-### unsloth/Phi-3.5-mini-instruct
-- 📄 [All Tokens (Text)](output/generated/unsloth/Phi-3.5-mini-instruct/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/unsloth/Phi-3.5-mini-instruct/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/unsloth/Phi-3.5-mini-instruct/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/unsloth/Phi-3.5-mini-instruct/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/unsloth/Phi-3.5-mini-instruct/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/unsloth/Phi-3.5-mini-instruct/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/unsloth/Phi-3.5-mini-instruct/tokens-statistics.json)
-
-
-### microsoft/phi-4
-- 📄 [All Tokens (Text)](output/generated/microsoft/phi-4/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/microsoft/phi-4/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/microsoft/phi-4/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/microsoft/phi-4/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/microsoft/phi-4/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/microsoft/phi-4/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/microsoft/phi-4/tokens-statistics.json)
-
-
-### microsoft/Phi-4-reasoning-plus
-- 📄 [All Tokens (Text)](output/generated/microsoft/Phi-4-reasoning-plus/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/microsoft/Phi-4-reasoning-plus/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/microsoft/Phi-4-reasoning-plus/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/microsoft/Phi-4-reasoning-plus/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/microsoft/Phi-4-reasoning-plus/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/microsoft/Phi-4-reasoning-plus/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/microsoft/Phi-4-reasoning-plus/tokens-statistics.json)
-
-
-### microsoft/bitnet-b1.58-2B-4T
-- 📄 [All Tokens (Text)](output/generated/microsoft/bitnet-b1.58-2B-4T/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/microsoft/bitnet-b1.58-2B-4T/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/microsoft/bitnet-b1.58-2B-4T/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/microsoft/bitnet-b1.58-2B-4T/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/microsoft/bitnet-b1.58-2B-4T/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/microsoft/bitnet-b1.58-2B-4T/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/microsoft/bitnet-b1.58-2B-4T/tokens-statistics.json)
-
-
-### ibm-granite/granite-4.0-tiny-preview
-- 📄 [All Tokens (Text)](output/generated/ibm-granite/granite-4.0-tiny-preview/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/ibm-granite/granite-4.0-tiny-preview/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/ibm-granite/granite-4.0-tiny-preview/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/ibm-granite/granite-4.0-tiny-preview/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/ibm-granite/granite-4.0-tiny-preview/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/ibm-granite/granite-4.0-tiny-preview/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/ibm-granite/granite-4.0-tiny-preview/tokens-statistics.json)
-
-
-### ibm-granite/granite-3.3-8b-instruct
-- 📄 [All Tokens (Text)](output/generated/ibm-granite/granite-3.3-8b-instruct/tokens-all.txt)
-- 📄 [All Tokens (JSON)](output/generated/ibm-granite/granite-3.3-8b-instruct/tokens-all.json)
-- 🇬🇷 [Greek Tokens (Text)](output/generated/ibm-granite/granite-3.3-8b-instruct/tokens-greek.txt)
-- 🇬🇷 [Greek Tokens (JSON)](output/generated/ibm-granite/granite-3.3-8b-instruct/tokens-greek.json)
-- 🇮🇹 [Latin Tokens (Text)](output/generated/ibm-granite/granite-3.3-8b-instruct/tokens-latin.txt)
-- 🇮🇹 [Latin Tokens (JSON)](output/generated/ibm-granite/granite-3.3-8b-instruct/tokens-latin.json)
-- 📊 [Statistics (JSON)](output/generated/ibm-granite/granite-3.3-8b-instruct/tokens-statistics.json)
-
-
-
 ---
-*Summary report generated on 2025-05-23 17:29:49 analyzing 29 models*
+*Summary report generated on 2025-05-23 18:12:38 analyzing 29 models*

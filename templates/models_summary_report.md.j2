@@ -18,11 +18,25 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 
 ## Model Performance Rankings
 
-### Best Greek Support
-🥇 **{{ overall_stats.best_greek_model[0] }}** - {{ "%.2f"|format(overall_stats.best_greek_model[1]) }}% Greek tokens
+### 🇬🇷 Greek Language Support
 
-### Lowest Greek Support
-📉 **{{ overall_stats.worst_greek_model[0] }}** - {{ "%.2f"|format(overall_stats.worst_greek_model[1]) }}% Greek tokens
+#### By Absolute Token Count
+🥇 **Most Tokens**: {{ (models | sort(attribute='stats.vocab_greek_size', reverse=true) | first).model_name }} - {{ (models | sort(attribute='stats.vocab_greek_size', reverse=true) | first).stats.vocab_greek_size | number_format }} tokens ({{ "%.2f"|format((models | sort(attribute='stats.vocab_greek_size', reverse=true) | first).stats.greek_percentage_raw) }}%)  
+📉 **Fewest Tokens**: {{ (models | sort(attribute='stats.vocab_greek_size') | first).model_name }} - {{ (models | sort(attribute='stats.vocab_greek_size') | first).stats.vocab_greek_size | number_format }} tokens ({{ "%.2f"|format((models | sort(attribute='stats.vocab_greek_size') | first).stats.greek_percentage_raw) }}%)
+
+#### By Percentage Coverage
+🥇 **Highest %**: {{ (models | sort(attribute='stats.greek_percentage_raw', reverse=true) | first).model_name }} - {{ "%.2f"|format((models | sort(attribute='stats.greek_percentage_raw', reverse=true) | first).stats.greek_percentage_raw) }}% ({{ (models | sort(attribute='stats.greek_percentage_raw', reverse=true) | first).stats.vocab_greek_size | number_format }} tokens)  
+📉 **Lowest %**: {{ (models | sort(attribute='stats.greek_percentage_raw') | first).model_name }} - {{ "%.2f"|format((models | sort(attribute='stats.greek_percentage_raw') | first).stats.greek_percentage_raw) }}% ({{ (models | sort(attribute='stats.greek_percentage_raw') | first).stats.vocab_greek_size | number_format }} tokens)
+
+### 🇮🇹 Latin Language Support
+
+#### By Absolute Token Count
+🥇 **Most Tokens**: {{ (models | sort(attribute='stats.vocab_latin_size', reverse=true) | first).model_name }} - {{ (models | sort(attribute='stats.vocab_latin_size', reverse=true) | first).stats.vocab_latin_size | number_format }} tokens ({{ "%.2f"|format((models | sort(attribute='stats.vocab_latin_size', reverse=true) | first).stats.latin_percentage_raw) }}%)  
+📉 **Fewest Tokens**: {{ (models | sort(attribute='stats.vocab_latin_size') | first).model_name }} - {{ (models | sort(attribute='stats.vocab_latin_size') | first).stats.vocab_latin_size | number_format }} tokens ({{ "%.2f"|format((models | sort(attribute='stats.vocab_latin_size') | first).stats.latin_percentage_raw) }}%)
+
+#### By Percentage Coverage
+🥇 **Highest %**: {{ (models | sort(attribute='stats.latin_percentage_raw', reverse=true) | first).model_name }} - {{ "%.2f"|format((models | sort(attribute='stats.latin_percentage_raw', reverse=true) | first).stats.latin_percentage_raw) }}% ({{ (models | sort(attribute='stats.latin_percentage_raw', reverse=true) | first).stats.vocab_latin_size | number_format }} tokens)  
+📉 **Lowest %**: {{ (models | sort(attribute='stats.latin_percentage_raw') | first).model_name }} - {{ "%.2f"|format((models | sort(attribute='stats.latin_percentage_raw') | first).stats.latin_percentage_raw) }}% ({{ (models | sort(attribute='stats.latin_percentage_raw') | first).stats.vocab_latin_size | number_format }} tokens)
 
 ## Greek Performance Rankings
 
@@ -42,6 +56,23 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | {{ loop.index }} | **{{ model.model_name }}** | {{ "%.2f"|format(model.stats.greek_percentage_raw) }}% | {{ model.stats.vocab_greek_size | number_format }} | {{ model.stats.vocab_all_size | number_format }} |
 {% endfor %}
 
+## Latin Performance Rankings
+
+### By Token Count (Absolute Numbers)
+
+| Rank | Model | Latin Tokens | Total Vocabulary | Percentage |
+|------|-------|--------------|------------------|------------|
+{% for model in models | sort(attribute='stats.vocab_latin_size', reverse=true) -%}
+| {{ loop.index }} | **{{ model.model_name }}** | {{ model.stats.vocab_latin_size | number_format }} | {{ model.stats.vocab_all_size | number_format }} | {{ "%.2f"|format(model.stats.latin_percentage_raw) }}% |
+{% endfor %}
+
+### By Percentage (Relative Performance)
+
+| Rank | Model | Percentage | Latin Tokens | Total Vocabulary |
+|------|-------|------------|--------------|------------------|
+{% for model in models | sort(attribute='stats.latin_percentage_raw', reverse=true) -%}
+| {{ loop.index }} | **{{ model.model_name }}** | {{ "%.2f"|format(model.stats.latin_percentage_raw) }}% | {{ model.stats.vocab_latin_size | number_format }} | {{ model.stats.vocab_all_size | number_format }} |
+{% endfor %}
 
 ## Comparative Analysis
 
@@ -97,27 +128,6 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | {% if i < high_greek|length %}{{ high_greek[i].model_name }} ({{ "%.2f"|format(high_greek[i].stats.greek_percentage_raw) }}%){% endif %} | {% if i < medium_greek|length %}{{ medium_greek[i].model_name }} ({{ "%.2f"|format(medium_greek[i].stats.greek_percentage_raw) }}%){% endif %} | {% if i < low_greek|length %}{{ low_greek[i].model_name }} ({{ "%.2f"|format(low_greek[i].stats.greek_percentage_raw) }}%){% endif %} |
 {% endfor %}
 
-### Performance Categories
-
-| High Greek Support (>1%) | Medium Greek Support (0.1-1%) | Low Greek Support (<0.1%) |
-|---------------------------|--------------------------------|---------------------------|
-{% set high_greek = [] -%}
-{% set medium_greek = [] -%}
-{% set low_greek = [] -%}
-{% for model in models -%}
-  {% if model.stats.greek_percentage_raw > 1.0 -%}
-    {% set _ = high_greek.append(model) -%}
-  {% elif model.stats.greek_percentage_raw > 0.1 -%}
-    {% set _ = medium_greek.append(model) -%}
-  {% else -%}
-    {% set _ = low_greek.append(model) -%}
-  {% endif -%}
-{% endfor -%}
-{% for i in range([high_greek|length, medium_greek|length, low_greek|length]|max) -%}
-| {% if i < high_greek|length %}{{ high_greek[i].model_name }} ({{ "%.2f"|format(high_greek[i].stats.greek_percentage_raw) }}%){% endif %} | {% if i < medium_greek|length %}{{ medium_greek[i].model_name }} ({{ "%.2f"|format(medium_greek[i].stats.greek_percentage_raw) }}%){% endif %} | {% if i < low_greek|length %}{{ low_greek[i].model_name }} ({{ "%.2f"|format(low_greek[i].stats.greek_percentage_raw) }}%){% endif %} |
-{% endfor %}
-
-
 ## Individual Model Analysis
 
 {% for model in models %}
@@ -143,13 +153,12 @@ Latin:  {{ "█" * (model.stats.vocab_latin_size // (model.stats.vocab_all_size 
 {% endif %}
 
 #### Sample Tokens
-**Greek**: {% for token_id, token in (model.greek_tokens.items() | list)[:10] %}`{{ token }}`{% if not loop.last %}, {% endif %}{% endfor %}...
+**Greek**: {% for token_id, token in (model.greek_tokens.items() | list)[:5] %}`{{ token }}`{% if not loop.last %}, {% endif %}{% endfor %}...
 
-**Latin**: {% for token_id, token in (model.latin_tokens.items() | list)[:10] %}`{{ token }}`{% if not loop.last %}, {% endif %}{% endfor %}...
+**Latin**: {% for token_id, token in (model.latin_tokens.items() | list)[:5] %}`{{ token }}`{% if not loop.last %}, {% endif %}{% endfor %}...
 
 ---
 {% endfor %}
-
 
 ---
 *Summary report generated on {{ generation_date }} analyzing {{ overall_stats.total_models }} models*
