@@ -4,17 +4,17 @@
 
 ## 🎯 Overview
 
-This report presents a comprehensive analysis of Greek language tokenization capabilities across **25** Large Language Models (LLMs). The analysis evaluates how effectively different transformer-based models handle Greek text through their tokenizer vocabularies, providing insights into Greek language support, character coverage, and tokenization efficiency.
+This report presents a comprehensive analysis of Greek language tokenization capabilities across **26** Large Language Models (LLMs). The analysis evaluates how effectively different transformer-based models handle Greek text through their tokenizer vocabularies, providing insights into Greek language support, character coverage, and tokenization efficiency.
 
 ## Overall Statistics
 
 | Metric | Value |
 |--------|-------|
-| **Total Models Analyzed** | 25 |
-| **Combined Vocabulary Size** | 3,007,103 tokens |
-| **Average Vocabulary Size** | 120,284 tokens |
-| **Total Greek Tokens** | 73,812 (2.45%) |
-| **Total Latin Tokens** | 2,010,562 (66.86%) |
+| **Total Models Analyzed** | 26 |
+| **Combined Vocabulary Size** | 3,080,543 tokens |
+| **Average Vocabulary Size** | 118,482 tokens |
+| **Total Greek Tokens** | 73,955 (2.40%) |
+| **Total Latin Tokens** | 2,046,968 (66.45%) |
 
 ## Model Performance Rankings
 
@@ -59,16 +59,17 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | 13 | **unsloth/DeepSeek-R1-0528** | 629 | 128,000 | 0.49% |
 | 14 | **unsloth/DeepSeek-Prover-V2-671B** | 629 | 128,000 | 0.49% |
 | 15 | **tngtech/DeepSeek-R1T-Chimera** | 629 | 128,000 | 0.49% |
-| 16 | **Qwen/Qwen3-32B** | 127 | 151,643 | 0.08% |
-| 17 | **Qwen/Qwen3-235B-A22B** | 127 | 151,643 | 0.08% |
-| 18 | **Qwen/Qwen2.5-Omni-3B** | 127 | 151,643 | 0.08% |
-| 19 | **deepseek-ai/DeepSeek-V2.5-1210** | 86 | 100,000 | 0.09% |
-| 20 | **unsloth/mistral-7b-v0.3** | 58 | 32,768 | 0.18% |
-| 21 | **unsloth/Mistral-Small-Instruct-2409** | 58 | 32,768 | 0.18% |
-| 22 | **microsoft/phi-4** | 44 | 100,352 | 0.04% |
-| 23 | **ibm-granite/granite-4.0-tiny-preview** | 42 | 49,152 | 0.09% |
-| 24 | **ibm-granite/granite-3.3-8b-instruct** | 42 | 49,152 | 0.09% |
-| 25 | **ibm-granite/granite-speech-3.3-8b** | 42 | 49,152 | 0.09% |
+| 16 | **openbmb/MiniCPM4-8B** | 143 | 73,440 | 0.19% |
+| 17 | **Qwen/Qwen3-32B** | 127 | 151,643 | 0.08% |
+| 18 | **Qwen/Qwen3-235B-A22B** | 127 | 151,643 | 0.08% |
+| 19 | **Qwen/Qwen2.5-Omni-3B** | 127 | 151,643 | 0.08% |
+| 20 | **deepseek-ai/DeepSeek-V2.5-1210** | 86 | 100,000 | 0.09% |
+| 21 | **unsloth/mistral-7b-v0.3** | 58 | 32,768 | 0.18% |
+| 22 | **unsloth/Mistral-Small-Instruct-2409** | 58 | 32,768 | 0.18% |
+| 23 | **microsoft/phi-4** | 44 | 100,352 | 0.04% |
+| 24 | **ibm-granite/granite-4.0-tiny-preview** | 42 | 49,152 | 0.09% |
+| 25 | **ibm-granite/granite-3.3-8b-instruct** | 42 | 49,152 | 0.09% |
+| 26 | **ibm-granite/granite-speech-3.3-8b** | 42 | 49,152 | 0.09% |
 
 
 ### By Percentage (Relative Performance)
@@ -90,16 +91,17 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | 13 | **unsloth/DeepSeek-R1-0528** | 0.49% | 629 | 128,000 |
 | 14 | **unsloth/DeepSeek-Prover-V2-671B** | 0.49% | 629 | 128,000 |
 | 15 | **tngtech/DeepSeek-R1T-Chimera** | 0.49% | 629 | 128,000 |
-| 16 | **unsloth/mistral-7b-v0.3** | 0.18% | 58 | 32,768 |
-| 17 | **unsloth/Mistral-Small-Instruct-2409** | 0.18% | 58 | 32,768 |
-| 18 | **deepseek-ai/DeepSeek-V2.5-1210** | 0.09% | 86 | 100,000 |
-| 19 | **ibm-granite/granite-4.0-tiny-preview** | 0.09% | 42 | 49,152 |
-| 20 | **ibm-granite/granite-3.3-8b-instruct** | 0.09% | 42 | 49,152 |
-| 21 | **ibm-granite/granite-speech-3.3-8b** | 0.09% | 42 | 49,152 |
-| 22 | **Qwen/Qwen3-32B** | 0.08% | 127 | 151,643 |
-| 23 | **Qwen/Qwen3-235B-A22B** | 0.08% | 127 | 151,643 |
-| 24 | **Qwen/Qwen2.5-Omni-3B** | 0.08% | 127 | 151,643 |
-| 25 | **microsoft/phi-4** | 0.04% | 44 | 100,352 |
+| 16 | **openbmb/MiniCPM4-8B** | 0.19% | 143 | 73,440 |
+| 17 | **unsloth/mistral-7b-v0.3** | 0.18% | 58 | 32,768 |
+| 18 | **unsloth/Mistral-Small-Instruct-2409** | 0.18% | 58 | 32,768 |
+| 19 | **deepseek-ai/DeepSeek-V2.5-1210** | 0.09% | 86 | 100,000 |
+| 20 | **ibm-granite/granite-4.0-tiny-preview** | 0.09% | 42 | 49,152 |
+| 21 | **ibm-granite/granite-3.3-8b-instruct** | 0.09% | 42 | 49,152 |
+| 22 | **ibm-granite/granite-speech-3.3-8b** | 0.09% | 42 | 49,152 |
+| 23 | **Qwen/Qwen3-32B** | 0.08% | 127 | 151,643 |
+| 24 | **Qwen/Qwen3-235B-A22B** | 0.08% | 127 | 151,643 |
+| 25 | **Qwen/Qwen2.5-Omni-3B** | 0.08% | 127 | 151,643 |
+| 26 | **microsoft/phi-4** | 0.04% | 44 | 100,352 |
 
 
 ## Latin Performance Rankings
@@ -130,9 +132,10 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | 20 | **ibm-granite/granite-4.0-tiny-preview** | 40,302 | 49,152 | 81.99% |
 | 21 | **ibm-granite/granite-3.3-8b-instruct** | 40,302 | 49,152 | 81.99% |
 | 22 | **ibm-granite/granite-speech-3.3-8b** | 40,302 | 49,152 | 81.99% |
-| 23 | **ilsp/Meltemi-7B-Instruct-v1.5** | 25,948 | 61,366 | 42.28% |
-| 24 | **unsloth/mistral-7b-v0.3** | 25,723 | 32,768 | 78.50% |
-| 25 | **unsloth/Mistral-Small-Instruct-2409** | 25,723 | 32,768 | 78.50% |
+| 23 | **openbmb/MiniCPM4-8B** | 36,406 | 73,440 | 49.57% |
+| 24 | **ilsp/Meltemi-7B-Instruct-v1.5** | 25,948 | 61,366 | 42.28% |
+| 25 | **unsloth/mistral-7b-v0.3** | 25,723 | 32,768 | 78.50% |
+| 26 | **unsloth/Mistral-Small-Instruct-2409** | 25,723 | 32,768 | 78.50% |
 
 
 ### By Percentage (Relative Performance)
@@ -163,7 +166,8 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | 22 | **unsloth/DeepSeek-R1-0528** | 55.82% | 71,454 | 128,000 |
 | 23 | **unsloth/DeepSeek-Prover-V2-671B** | 55.82% | 71,454 | 128,000 |
 | 24 | **tngtech/DeepSeek-R1T-Chimera** | 55.82% | 71,454 | 128,000 |
-| 25 | **ilsp/Meltemi-7B-Instruct-v1.5** | 42.28% | 25,948 | 61,366 |
+| 25 | **openbmb/MiniCPM4-8B** | 49.57% | 36,406 | 73,440 |
+| 26 | **ilsp/Meltemi-7B-Instruct-v1.5** | 42.28% | 25,948 | 61,366 |
 
 
 ## Comparative Analysis
@@ -172,31 +176,32 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 
 | Model | Total Vocabulary | Visual Scale | Relative Size |
 |-------|------------------|--------------|---------------|
-| **unsloth/gemma-3-27b-it** | 262,144 |  | 217.9% of avg |
-| **mlx-community/aya-expanse-32b-8bit** | 255,000 |  | 212.0% of avg |
-| **Qwen/Qwen3-32B** | 151,643 |  | 126.1% of avg |
-| **Qwen/Qwen3-235B-A22B** | 151,643 |  | 126.1% of avg |
-| **Qwen/Qwen2.5-Omni-3B** | 151,643 |  | 126.1% of avg |
-| **ilsp/Llama-Krikri-8B-Instruct** | 149,248 |  | 124.1% of avg |
-| **unsloth/Devstral-Small-2505** | 131,072 |  | 109.0% of avg |
-| **unsloth/Llama-3.2-3B-Instruct** | 128,000 |  | 106.4% of avg |
-| **unsloth/llama-3-8b** | 128,000 |  | 106.4% of avg |
-| **unsloth/Llama-3.3-70B-Instruct** | 128,000 |  | 106.4% of avg |
-| **kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit** | 128,000 |  | 106.4% of avg |
-| **unsloth/DeepSeek-R1** | 128,000 |  | 106.4% of avg |
-| **unsloth/DeepSeek-R1-0528** | 128,000 |  | 106.4% of avg |
-| **unsloth/DeepSeek-Prover-V2-671B** | 128,000 |  | 106.4% of avg |
-| **tngtech/DeepSeek-R1T-Chimera** | 128,000 |  | 106.4% of avg |
-| **microsoft/bitnet-b1.58-2B-4T** | 128,000 |  | 106.4% of avg |
-| **nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1** | 128,000 |  | 106.4% of avg |
-| **microsoft/phi-4** | 100,352 |  | 83.4% of avg |
-| **deepseek-ai/DeepSeek-V2.5-1210** | 100,000 |  | 83.1% of avg |
-| **ilsp/Meltemi-7B-Instruct-v1.5** | 61,366 |  | 51.0% of avg |
-| **ibm-granite/granite-4.0-tiny-preview** | 49,152 |  | 40.9% of avg |
-| **ibm-granite/granite-3.3-8b-instruct** | 49,152 |  | 40.9% of avg |
-| **ibm-granite/granite-speech-3.3-8b** | 49,152 |  | 40.9% of avg |
-| **unsloth/mistral-7b-v0.3** | 32,768 |  | 27.2% of avg |
-| **unsloth/Mistral-Small-Instruct-2409** | 32,768 |  | 27.2% of avg |
+| **unsloth/gemma-3-27b-it** | 262,144 |  | 221.3% of avg |
+| **mlx-community/aya-expanse-32b-8bit** | 255,000 |  | 215.2% of avg |
+| **Qwen/Qwen3-32B** | 151,643 |  | 128.0% of avg |
+| **Qwen/Qwen3-235B-A22B** | 151,643 |  | 128.0% of avg |
+| **Qwen/Qwen2.5-Omni-3B** | 151,643 |  | 128.0% of avg |
+| **ilsp/Llama-Krikri-8B-Instruct** | 149,248 |  | 126.0% of avg |
+| **unsloth/Devstral-Small-2505** | 131,072 |  | 110.6% of avg |
+| **unsloth/Llama-3.2-3B-Instruct** | 128,000 |  | 108.0% of avg |
+| **unsloth/llama-3-8b** | 128,000 |  | 108.0% of avg |
+| **unsloth/Llama-3.3-70B-Instruct** | 128,000 |  | 108.0% of avg |
+| **kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit** | 128,000 |  | 108.0% of avg |
+| **unsloth/DeepSeek-R1** | 128,000 |  | 108.0% of avg |
+| **unsloth/DeepSeek-R1-0528** | 128,000 |  | 108.0% of avg |
+| **unsloth/DeepSeek-Prover-V2-671B** | 128,000 |  | 108.0% of avg |
+| **tngtech/DeepSeek-R1T-Chimera** | 128,000 |  | 108.0% of avg |
+| **microsoft/bitnet-b1.58-2B-4T** | 128,000 |  | 108.0% of avg |
+| **nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1** | 128,000 |  | 108.0% of avg |
+| **microsoft/phi-4** | 100,352 |  | 84.7% of avg |
+| **deepseek-ai/DeepSeek-V2.5-1210** | 100,000 |  | 84.4% of avg |
+| **openbmb/MiniCPM4-8B** | 73,440 |  | 62.0% of avg |
+| **ilsp/Meltemi-7B-Instruct-v1.5** | 61,366 |  | 51.8% of avg |
+| **ibm-granite/granite-4.0-tiny-preview** | 49,152 |  | 41.5% of avg |
+| **ibm-granite/granite-3.3-8b-instruct** | 49,152 |  | 41.5% of avg |
+| **ibm-granite/granite-speech-3.3-8b** | 49,152 |  | 41.5% of avg |
+| **unsloth/mistral-7b-v0.3** | 32,768 |  | 27.7% of avg |
+| **unsloth/Mistral-Small-Instruct-2409** | 32,768 |  | 27.7% of avg |
 
 
 ### Greek Support Comparison
@@ -218,16 +223,17 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | 13 | **unsloth/DeepSeek-R1-0528** | 0.49% | 629 | 🟩⬜⬜⬜⬜ |
 | 14 | **unsloth/DeepSeek-Prover-V2-671B** | 0.49% | 629 | 🟩⬜⬜⬜⬜ |
 | 15 | **tngtech/DeepSeek-R1T-Chimera** | 0.49% | 629 | 🟩⬜⬜⬜⬜ |
-| 16 | **Qwen/Qwen3-32B** | 0.08% | 127 | ⬜⬜⬜⬜⬜ |
-| 17 | **Qwen/Qwen3-235B-A22B** | 0.08% | 127 | ⬜⬜⬜⬜⬜ |
-| 18 | **Qwen/Qwen2.5-Omni-3B** | 0.08% | 127 | ⬜⬜⬜⬜⬜ |
-| 19 | **deepseek-ai/DeepSeek-V2.5-1210** | 0.09% | 86 | ⬜⬜⬜⬜⬜ |
-| 20 | **unsloth/mistral-7b-v0.3** | 0.18% | 58 | ⬜⬜⬜⬜⬜ |
-| 21 | **unsloth/Mistral-Small-Instruct-2409** | 0.18% | 58 | ⬜⬜⬜⬜⬜ |
-| 22 | **microsoft/phi-4** | 0.04% | 44 | ⬜⬜⬜⬜⬜ |
-| 23 | **ibm-granite/granite-4.0-tiny-preview** | 0.09% | 42 | ⬜⬜⬜⬜⬜ |
-| 24 | **ibm-granite/granite-3.3-8b-instruct** | 0.09% | 42 | ⬜⬜⬜⬜⬜ |
-| 25 | **ibm-granite/granite-speech-3.3-8b** | 0.09% | 42 | ⬜⬜⬜⬜⬜ |
+| 16 | **openbmb/MiniCPM4-8B** | 0.19% | 143 | ⬜⬜⬜⬜⬜ |
+| 17 | **Qwen/Qwen3-32B** | 0.08% | 127 | ⬜⬜⬜⬜⬜ |
+| 18 | **Qwen/Qwen3-235B-A22B** | 0.08% | 127 | ⬜⬜⬜⬜⬜ |
+| 19 | **Qwen/Qwen2.5-Omni-3B** | 0.08% | 127 | ⬜⬜⬜⬜⬜ |
+| 20 | **deepseek-ai/DeepSeek-V2.5-1210** | 0.09% | 86 | ⬜⬜⬜⬜⬜ |
+| 21 | **unsloth/mistral-7b-v0.3** | 0.18% | 58 | ⬜⬜⬜⬜⬜ |
+| 22 | **unsloth/Mistral-Small-Instruct-2409** | 0.18% | 58 | ⬜⬜⬜⬜⬜ |
+| 23 | **microsoft/phi-4** | 0.04% | 44 | ⬜⬜⬜⬜⬜ |
+| 24 | **ibm-granite/granite-4.0-tiny-preview** | 0.09% | 42 | ⬜⬜⬜⬜⬜ |
+| 25 | **ibm-granite/granite-3.3-8b-instruct** | 0.09% | 42 | ⬜⬜⬜⬜⬜ |
+| 26 | **ibm-granite/granite-speech-3.3-8b** | 0.09% | 42 | ⬜⬜⬜⬜⬜ |
 
 
 ### Latin Support Comparison
@@ -256,9 +262,10 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | 20 | **ibm-granite/granite-4.0-tiny-preview** | 81.99% | 40,302 | 🟦🟦🟦🟦🟦 |
 | 21 | **ibm-granite/granite-3.3-8b-instruct** | 81.99% | 40,302 | 🟦🟦🟦🟦🟦 |
 | 22 | **ibm-granite/granite-speech-3.3-8b** | 81.99% | 40,302 | 🟦🟦🟦🟦🟦 |
-| 23 | **ilsp/Meltemi-7B-Instruct-v1.5** | 42.28% | 25,948 | 🟦🟦🟦🟦🟦 |
-| 24 | **unsloth/mistral-7b-v0.3** | 78.50% | 25,723 | 🟦🟦🟦🟦🟦 |
-| 25 | **unsloth/Mistral-Small-Instruct-2409** | 78.50% | 25,723 | 🟦🟦🟦🟦🟦 |
+| 23 | **openbmb/MiniCPM4-8B** | 49.57% | 36,406 | 🟦🟦🟦🟦🟦 |
+| 24 | **ilsp/Meltemi-7B-Instruct-v1.5** | 42.28% | 25,948 | 🟦🟦🟦🟦🟦 |
+| 25 | **unsloth/mistral-7b-v0.3** | 78.50% | 25,723 | 🟦🟦🟦🟦🟦 |
+| 26 | **unsloth/Mistral-Small-Instruct-2409** | 78.50% | 25,723 | 🟦🟦🟦🟦🟦 |
 
 
 ### Cross-Language Performance Matrix
@@ -290,6 +297,7 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | **ibm-granite/granite-speech-3.3-8b** | 49,152 | 0.09% | 42 | 81.99% | 40,302 | 0.00 |
 | **mlx-community/aya-expanse-32b-8bit** | 255,000 | 2.96% | 7,547 | 68.12% | 173,699 | 0.04 |
 | **nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1** | 128,000 | 1.08% | 1,378 | 75.54% | 96,687 | 0.01 |
+| **openbmb/MiniCPM4-8B** | 73,440 | 0.19% | 143 | 49.57% | 36,406 | 0.00 |
 
 
 ### Performance Categories
@@ -303,7 +311,7 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | ilsp/Meltemi-7B-Instruct-v1.5 (45.89%) | unsloth/DeepSeek-R1-0528 (0.49%) | microsoft/phi-4 (0.04%) |
 | ilsp/Llama-Krikri-8B-Instruct (14.88%) | unsloth/DeepSeek-Prover-V2-671B (0.49%) | ibm-granite/granite-4.0-tiny-preview (0.09%) |
 | unsloth/Devstral-Small-2505 (1.15%) | tngtech/DeepSeek-R1T-Chimera (0.49%) | ibm-granite/granite-3.3-8b-instruct (0.09%) |
-| microsoft/bitnet-b1.58-2B-4T (1.08%) |  | ibm-granite/granite-speech-3.3-8b (0.09%) |
+| microsoft/bitnet-b1.58-2B-4T (1.08%) | openbmb/MiniCPM4-8B (0.19%) | ibm-granite/granite-speech-3.3-8b (0.09%) |
 | mlx-community/aya-expanse-32b-8bit (2.96%) |  |  |
 | nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1 (1.08%) |  |  |
 
@@ -1011,6 +1019,34 @@ Latin:  ██████████████████████      
 
 ---
 
+### openbmb/MiniCPM4-8B
+
+| Metric | Value | Percentage |
+|--------|-------|------------|
+| **Total Vocabulary** | 73,440 | 100% |
+| **Greek Tokens** | 143 | 0.19% |
+| **Latin Tokens** | 36,406 | 49.57% |
+
+#### Language Distribution
+```
+Greek:                                 0.19%
+Latin:  ██████████████                 49.57%
+```
+
+
+#### Greek Character Statistics
+- **Total Greek Characters**: 
+- **Unique Characters**: 
+- **Most Common**: `` ( times)
+
+
+#### Sample Tokens
+**Greek**: `α`, `μ`, `β`, `θ`, `π`...
+
+**Latin**: `A`, `B`, `C`, `D`, `E`...
 
 ---
-*Summary report generated on 2025-06-07 23:00:46 analyzing 25 models*
+
+
+---
+*Summary report generated on 2025-06-09 15:01:13 analyzing 26 models*
