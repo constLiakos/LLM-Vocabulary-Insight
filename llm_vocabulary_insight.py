@@ -108,6 +108,40 @@ def tokens_alphabet_statistics(json_data:json):
                              reverse=True))
     return sorted_stats
 
+def get_model_parameters(model_name):
+    """Attempt to get model parameters as a rounded string (e.g. '8B')."""
+    try:
+        from huggingface_hub import HfApi
+        api = HfApi()
+        info = api.model_info(model_name)
+        if getattr(info, "safetensors", None) and info.safetensors.total:
+            total_params = info.safetensors.total
+            billions = round(total_params / 1e9)
+            if billions > 0:
+                return f"{billions}B"
+            else:
+                return "<1B"
+    except Exception:
+        pass
+    
+    # Fallback to parsing from model name
+    import re
+    # Try pattern like 2x8B, 3.5B, etc. We just want the base number if possible,
+    # but simple regex for now:
+    match = re.search(r'[-_](?:\d+x)?(\d+(?:\.\d+)?)[Bb](?![a-zA-Z])', model_name)
+    if match:
+        num = float(match.group(1))
+        rounded = round(num)
+        return f"{rounded}B" if rounded > 0 else "<1B"
+        
+    match = re.search(r'(\d+(?:\.\d+)?)[Bb](?![a-zA-Z])', model_name)
+    if match:
+        num = float(match.group(1))
+        rounded = round(num)
+        return f"{rounded}B" if rounded > 0 else "<1B"
+    
+    return "N/A"
+
 def vocabulary_extractor(model_config:Config):
     # Create directories if they dont exist
     create_dirs(model_config)
@@ -188,13 +222,17 @@ def vocabulary_extractor(model_config:Config):
     with open(model_config.tokens_statistics_filename, "w") as f:
         f.write(model_statistics_str)
 
+    parameters = get_model_parameters(model_config.model_name)
+
     generate_markdown_report(model_config, model_statistics, 
                            tokens_formatted_greek_obj, 
-                           tokens_formatted_latin_obj)
+                           tokens_formatted_latin_obj,
+                           parameters)
     
     # Return model data for summary report
     return {
         'model_name': model_config.model_name,
+        'parameters': parameters,
         'stats': model_statistics,
         'greek_tokens': tokens_formatted_greek_obj,
         'latin_tokens': tokens_formatted_latin_obj,
@@ -210,7 +248,7 @@ def vocabulary_extractor(model_config:Config):
     }
 
 def generate_markdown_report(model_config: Config, stats: dict, 
-                           greek_tokens: dict, latin_tokens: dict):
+                           greek_tokens: dict, latin_tokens: dict, parameters: str = "N/A"):
     """Generate a comprehensive markdown report using Jinja2"""
     
     # Setup Jinja2 environment
@@ -232,6 +270,7 @@ def generate_markdown_report(model_config: Config, stats: dict,
     # Prepare template data
     template_data = {
         'model_name': model_config.model_name,
+        'parameters': parameters,
         'stats': stats,
         'greek_sample': list(greek_tokens.items())[:20],
         'latin_sample': list(latin_tokens.items())[:20],

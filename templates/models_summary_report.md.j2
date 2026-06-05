@@ -42,46 +42,46 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 
 ### By Token Count (Absolute Numbers)
 
-| Rank | Model | Greek Tokens | Total Vocabulary | Percentage |
-|------|-------|--------------|------------------|------------|
+| Rank | Model | Parameters | Greek Tokens | Total Vocabulary | Percentage |
+|------|-------|------------|--------------|------------------|------------|
 {% for model in models | sort(attribute='stats.vocab_greek_size', reverse=true) -%}
-| {{ loop.index }} | **{{ model.model_name }}** | {{ model.stats.vocab_greek_size | number_format }} | {{ model.stats.vocab_all_size | number_format }} | {{ "%.2f"|format(model.stats.greek_percentage_raw) }}% |
+| {{ loop.index }} | **{{ model.model_name }}** | {{ model.parameters }} | {{ model.stats.vocab_greek_size | number_format }} | {{ model.stats.vocab_all_size | number_format }} | {{ "%.2f"|format(model.stats.greek_percentage_raw) }}% |
 {% endfor %}
 
 ### By Percentage (Relative Performance)
 
-| Rank | Model | Percentage | Greek Tokens | Total Vocabulary |
-|------|-------|------------|--------------|------------------|
+| Rank | Model | Parameters | Percentage | Greek Tokens | Total Vocabulary |
+|------|-------|------------|------------|--------------|------------------|
 {% for model in models | sort(attribute='stats.greek_percentage_raw', reverse=true) -%}
-| {{ loop.index }} | **{{ model.model_name }}** | {{ "%.2f"|format(model.stats.greek_percentage_raw) }}% | {{ model.stats.vocab_greek_size | number_format }} | {{ model.stats.vocab_all_size | number_format }} |
+| {{ loop.index }} | **{{ model.model_name }}** | {{ model.parameters }} | {{ "%.2f"|format(model.stats.greek_percentage_raw) }}% | {{ model.stats.vocab_greek_size | number_format }} | {{ model.stats.vocab_all_size | number_format }} |
 {% endfor %}
 
 ## Latin Performance Rankings
 
 ### By Token Count (Absolute Numbers)
 
-| Rank | Model | Latin Tokens | Total Vocabulary | Percentage |
-|------|-------|--------------|------------------|------------|
+| Rank | Model | Parameters | Latin Tokens | Total Vocabulary | Percentage |
+|------|-------|------------|--------------|------------------|------------|
 {% for model in models | sort(attribute='stats.vocab_latin_size', reverse=true) -%}
-| {{ loop.index }} | **{{ model.model_name }}** | {{ model.stats.vocab_latin_size | number_format }} | {{ model.stats.vocab_all_size | number_format }} | {{ "%.2f"|format(model.stats.latin_percentage_raw) }}% |
+| {{ loop.index }} | **{{ model.model_name }}** | {{ model.parameters }} | {{ model.stats.vocab_latin_size | number_format }} | {{ model.stats.vocab_all_size | number_format }} | {{ "%.2f"|format(model.stats.latin_percentage_raw) }}% |
 {% endfor %}
 
 ### By Percentage (Relative Performance)
 
-| Rank | Model | Percentage | Latin Tokens | Total Vocabulary |
-|------|-------|------------|--------------|------------------|
+| Rank | Model | Parameters | Percentage | Latin Tokens | Total Vocabulary |
+|------|-------|------------|------------|--------------|------------------|
 {% for model in models | sort(attribute='stats.latin_percentage_raw', reverse=true) -%}
-| {{ loop.index }} | **{{ model.model_name }}** | {{ "%.2f"|format(model.stats.latin_percentage_raw) }}% | {{ model.stats.vocab_latin_size | number_format }} | {{ model.stats.vocab_all_size | number_format }} |
+| {{ loop.index }} | **{{ model.model_name }}** | {{ model.parameters }} | {{ "%.2f"|format(model.stats.latin_percentage_raw) }}% | {{ model.stats.vocab_latin_size | number_format }} | {{ model.stats.vocab_all_size | number_format }} |
 {% endfor %}
 
 ## Comparative Analysis
 
 ### Vocabulary Size Distribution
 
-| Model | Total Vocabulary | Visual Scale | Relative Size |
-|-------|------------------|--------------|---------------|
+| Model | Parameters | Total Vocabulary | Visual Scale | Relative Size |
+|-------|------------|------------------|--------------|---------------|
 {% for model in models | sort(attribute='stats.vocab_all_size', reverse=true) -%}
-| **{{ model.model_name }}** | {{ model.stats.vocab_all_size | number_format }} | {{ "█" * (model.stats.vocab_all_size // (overall_stats.total_vocab_size // 10)) }} | {{ "%.1f"|format((model.stats.vocab_all_size / overall_stats.avg_vocab_size) * 100) }}% of avg |
+| **{{ model.model_name }}** | {{ model.parameters }} | {{ model.stats.vocab_all_size | number_format }} | {{ "█" * (model.stats.vocab_all_size // (overall_stats.total_vocab_size // 10)) }} | {{ "%.1f"|format((model.stats.vocab_all_size / overall_stats.avg_vocab_size) * 100) }}% of avg |
 {% endfor %}
 
 ### Greek Support Comparison
@@ -102,10 +102,10 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 
 ### Cross-Language Performance Matrix
 
-| Model | Total Vocab | Greek % | Greek Tokens | Latin % | Latin Tokens | Greek/Latin Ratio |
-|-------|-------------|---------|--------------|---------|--------------|-------------------|
+| Model | Parameters | Total Vocab | Greek % | Greek Tokens | Latin % | Latin Tokens | Greek/Latin Ratio |
+|-------|------------|-------------|---------|--------------|---------|--------------|-------------------|
 {% for model in models -%}
-| **{{ model.model_name }}** | {{ model.stats.vocab_all_size | number_format }} | {{ "%.2f"|format(model.stats.greek_percentage_raw) }}% | {{ model.stats.vocab_greek_size | number_format }} | {{ "%.2f"|format(model.stats.latin_percentage_raw) }}% | {{ model.stats.vocab_latin_size | number_format }} | {{ "%.2f"|format(model.stats.vocab_greek_size / (model.stats.vocab_latin_size + 1)) }} |
+| **{{ model.model_name }}** | {{ model.parameters }} | {{ model.stats.vocab_all_size | number_format }} | {{ "%.2f"|format(model.stats.greek_percentage_raw) }}% | {{ model.stats.vocab_greek_size | number_format }} | {{ "%.2f"|format(model.stats.latin_percentage_raw) }}% | {{ model.stats.vocab_latin_size | number_format }} | {{ "%.2f"|format(model.stats.vocab_greek_size / (model.stats.vocab_latin_size + 1)) }} |
 {% endfor %}
 
 ### Performance Categories
@@ -135,6 +135,7 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 
 | Metric | Value | Percentage |
 |--------|-------|------------|
+| **Parameters** | {{ model.parameters }} | - |
 | **Total Vocabulary** | {{ model.stats.vocab_all_size | number_format }} | 100% |
 | **Greek Tokens** | {{ model.stats.vocab_greek_size | number_format }} | {{ model.stats.vocabulary_greek_percentage }} |
 | **Latin Tokens** | {{ model.stats.vocab_latin_size | number_format }} | {{ model.stats.vocabulary_latin_percentage }} |
