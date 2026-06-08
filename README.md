@@ -4,17 +4,17 @@
 
 ## 🎯 Overview
 
-This report presents a comprehensive analysis of Greek language tokenization capabilities across **50** Large Language Models (LLMs). The analysis evaluates how effectively different transformer-based models handle Greek text through their tokenizer vocabularies, providing insights into Greek language support, character coverage, and tokenization efficiency.
+This report presents a comprehensive analysis of Greek language tokenization capabilities across **54** Large Language Models (LLMs). The analysis evaluates how effectively different transformer-based models handle Greek text through their tokenizer vocabularies, providing insights into Greek language support, character coverage, and tokenization efficiency.
 
 ## Overall Statistics
 
 | Metric | Value |
 |--------|-------|
-| **Total Models Analyzed** | 50 |
-| **Combined Vocabulary Size** | 7,392,149 tokens |
-| **Average Vocabulary Size** | 147,842 tokens |
-| **Total Greek Tokens** | 105,595 (1.43%) |
-| **Total Latin Tokens** | 4,758,538 (64.37%) |
+| **Total Models Analyzed** | 54 |
+| **Combined Vocabulary Size** | 7,797,154 tokens |
+| **Average Vocabulary Size** | 144,391 tokens |
+| **Total Greek Tokens** | 140,510 (1.80%) |
+| **Total Latin Tokens** | 5,025,935 (64.46%) |
 
 ## Model Performance Rankings
 
@@ -36,7 +36,7 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 
 #### By Percentage Coverage
 🥇 **Highest %**: microsoft/phi-4 - 89.33% (89,643 tokens)  
-📉 **Lowest %**: ilsp/Meltemi-7B-Instruct-v1.5 - 42.28% (25,948 tokens)
+📉 **Lowest %**: ASiatras/Chios_Chatbot - 42.28% (25,945 tokens)
 
 ## Greek Performance Rankings
 
@@ -45,55 +45,59 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | Rank | Model | Parameters | Greek Tokens | Total Vocabulary | Percentage |
 |------|-------|------------|--------------|------------------|------------|
 | 1 | **ilsp/Meltemi-7B-Instruct-v1.5** | 7B | 28,162 | 61,366 | 45.89% |
-| 2 | **ilsp/Llama-Krikri-8B-Instruct** | 8B | 22,212 | 149,248 | 14.88% |
-| 3 | **mlx-community/aya-expanse-32b-8bit** | 32B | 7,547 | 255,000 | 2.96% |
-| 4 | **1-800-LLMs/tiny-aya-earth** | 3B | 4,622 | 261,000 | 1.77% |
-| 5 | **kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit** | 9B | 2,816 | 128,000 | 2.20% |
-| 6 | **unsloth/Qwen3.5-27B** | 28B | 1,538 | 248,044 | 0.62% |
-| 7 | **unsloth/Qwen3.5-122B-A10B** | 125B | 1,538 | 248,044 | 0.62% |
-| 8 | **unsloth/Qwen3.6-35B-A3B** | 36B | 1,538 | 248,044 | 0.62% |
-| 9 | **unsloth/Qwen3.6-27B** | 28B | 1,538 | 248,044 | 0.62% |
-| 10 | **unsloth/NVIDIA-Nemotron-3-Nano-4B** | 4B | 1,507 | 131,072 | 1.15% |
-| 11 | **unsloth/Nemotron-3-Nano-30B-A3B** | 32B | 1,507 | 131,072 | 1.15% |
-| 12 | **unsloth/Devstral-Small-2505** | 24B | 1,507 | 131,072 | 1.15% |
-| 13 | **unsloth/Magistral-Small-2506** | 24B | 1,507 | 131,072 | 1.15% |
-| 14 | **unsloth/Mistral-Medium-3.5-128B** | 128B | 1,507 | 131,072 | 1.15% |
-| 15 | **unsloth/Mistral-Small-4-119B-2603** | 119B | 1,507 | 131,072 | 1.15% |
-| 16 | **unsloth/Mistral-Small-3.2-24B-Instruct-2506** | 24B | 1,507 | 131,072 | 1.15% |
-| 17 | **unsloth/gemma-3-27b-it** | 27B | 1,409 | 262,144 | 0.54% |
-| 18 | **unsloth/gemma-4-12b-it** | 12B | 1,409 | 262,144 | 0.54% |
-| 19 | **unsloth/gemma-4-12b** | 12B | 1,409 | 262,144 | 0.54% |
-| 20 | **unsloth/gemma-4-E2B** | 5B | 1,409 | 262,144 | 0.54% |
-| 21 | **unsloth/gemma-4-E4B** | 8B | 1,409 | 262,144 | 0.54% |
-| 22 | **unsloth/gemma-4-31B** | 33B | 1,409 | 262,144 | 0.54% |
-| 23 | **unsloth/Llama-3.2-3B-Instruct** | 3B | 1,378 | 128,000 | 1.08% |
-| 24 | **unsloth/llama-3-8b** | 8B | 1,378 | 128,000 | 1.08% |
-| 25 | **unsloth/Llama-3.3-70B-Instruct** | 71B | 1,378 | 128,000 | 1.08% |
-| 26 | **unsloth/Llama-3.1-Nemotron-Nano-8B-v1** | 8B | 1,378 | 128,000 | 1.08% |
-| 27 | **microsoft/bitnet-b1.58-2B-4T** | 1B | 1,378 | 128,000 | 1.08% |
-| 28 | **nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1** | 9B | 1,378 | 128,000 | 1.08% |
-| 29 | **HuggingFaceTB/SmolLM3-3B** | 3B | 1,378 | 128,000 | 1.08% |
-| 30 | **THUDM/GLM-4.1V-9B-Thinking** | 10B | 832 | 151,329 | 0.55% |
-| 31 | **unsloth/Step-3.7-Flash** | 201B | 629 | 128,000 | 0.49% |
-| 32 | **unsloth/DeepSeek-R1** | 684B | 629 | 128,000 | 0.49% |
-| 33 | **unsloth/DeepSeek-R1-0528** | N/A | 629 | 128,000 | 0.49% |
-| 34 | **unsloth/DeepSeek-Prover-V2-671B** | 671B | 629 | 128,000 | 0.49% |
-| 35 | **tngtech/DeepSeek-R1T-Chimera** | 685B | 629 | 128,000 | 0.49% |
-| 36 | **unsloth/LFM2.5-8B-A1B** | 8B | 430 | 124,893 | 0.34% |
-| 37 | **openbmb/MiniCPM4-8B** | 8B | 143 | 73,440 | 0.19% |
-| 38 | **Qwen/Qwen3-32B** | 33B | 127 | 151,643 | 0.08% |
-| 39 | **Qwen/Qwen3-235B-A22B** | 235B | 127 | 151,643 | 0.08% |
-| 40 | **Qwen/Qwen2.5-Omni-3B** | 6B | 127 | 151,643 | 0.08% |
-| 41 | **deepseek-ai/DeepSeek-V2.5-1210** | 236B | 86 | 100,000 | 0.09% |
-| 42 | **unsloth/mistral-7b-v0.3** | 7B | 58 | 32,768 | 0.18% |
-| 43 | **unsloth/Mistral-Small-Instruct-2409** | 22B | 58 | 32,768 | 0.18% |
-| 44 | **microsoft/phi-4** | 15B | 44 | 100,352 | 0.04% |
-| 45 | **unsloth/granite-4.1-30b** | 29B | 44 | 100,352 | 0.04% |
-| 46 | **unsloth/granite-4.1-8b** | 9B | 44 | 100,352 | 0.04% |
-| 47 | **unsloth/granite-4.1-30b** | 29B | 44 | 100,352 | 0.04% |
-| 48 | **ibm-granite/granite-4.0-tiny-preview** | 7B | 42 | 49,152 | 0.09% |
-| 49 | **ibm-granite/granite-3.3-8b-instruct** | 8B | 42 | 49,152 | 0.09% |
-| 50 | **ibm-granite/granite-speech-3.3-8b** | 9B | 42 | 49,152 | 0.09% |
+| 2 | **ASiatras/Chios_Chatbot** | 1B | 28,152 | 61,362 | 45.88% |
+| 3 | **ilsp/Llama-Krikri-8B-Instruct** | 8B | 22,212 | 149,248 | 14.88% |
+| 4 | **mlx-community/aya-expanse-32b-8bit** | 32B | 7,547 | 255,000 | 2.96% |
+| 5 | **1-800-LLMs/tiny-aya-earth** | 3B | 4,622 | 261,000 | 1.77% |
+| 6 | **kyutai/helium-1-2b** | 2B | 3,820 | 64,000 | 5.97% |
+| 7 | **kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit** | 9B | 2,816 | 128,000 | 2.20% |
+| 8 | **utter-project/EuroMoE-2.6B-A0.6B-2512** | 3B | 2,816 | 128,000 | 2.20% |
+| 9 | **unsloth/Qwen3.5-27B** | 28B | 1,538 | 248,044 | 0.62% |
+| 10 | **unsloth/Qwen3.5-122B-A10B** | 125B | 1,538 | 248,044 | 0.62% |
+| 11 | **unsloth/Qwen3.6-35B-A3B** | 36B | 1,538 | 248,044 | 0.62% |
+| 12 | **unsloth/Qwen3.6-27B** | 28B | 1,538 | 248,044 | 0.62% |
+| 13 | **unsloth/NVIDIA-Nemotron-3-Nano-4B** | 4B | 1,507 | 131,072 | 1.15% |
+| 14 | **unsloth/Nemotron-3-Nano-30B-A3B** | 32B | 1,507 | 131,072 | 1.15% |
+| 15 | **unsloth/Devstral-Small-2505** | 24B | 1,507 | 131,072 | 1.15% |
+| 16 | **unsloth/Magistral-Small-2506** | 24B | 1,507 | 131,072 | 1.15% |
+| 17 | **unsloth/Mistral-Medium-3.5-128B** | 128B | 1,507 | 131,072 | 1.15% |
+| 18 | **unsloth/Mistral-Small-4-119B-2603** | 119B | 1,507 | 131,072 | 1.15% |
+| 19 | **unsloth/Mistral-Small-3.2-24B-Instruct-2506** | 24B | 1,507 | 131,072 | 1.15% |
+| 20 | **unsloth/gemma-3-27b-it** | 27B | 1,409 | 262,144 | 0.54% |
+| 21 | **unsloth/gemma-4-12b-it** | 12B | 1,409 | 262,144 | 0.54% |
+| 22 | **unsloth/gemma-4-12b** | 12B | 1,409 | 262,144 | 0.54% |
+| 23 | **unsloth/gemma-4-E2B** | 5B | 1,409 | 262,144 | 0.54% |
+| 24 | **unsloth/gemma-4-E4B** | 8B | 1,409 | 262,144 | 0.54% |
+| 25 | **unsloth/gemma-4-31B** | 33B | 1,409 | 262,144 | 0.54% |
+| 26 | **unsloth/Llama-3.2-3B-Instruct** | 3B | 1,378 | 128,000 | 1.08% |
+| 27 | **unsloth/llama-3-8b** | 8B | 1,378 | 128,000 | 1.08% |
+| 28 | **unsloth/Llama-3.3-70B-Instruct** | 71B | 1,378 | 128,000 | 1.08% |
+| 29 | **unsloth/Llama-3.1-Nemotron-Nano-8B-v1** | 8B | 1,378 | 128,000 | 1.08% |
+| 30 | **microsoft/bitnet-b1.58-2B-4T** | 1B | 1,378 | 128,000 | 1.08% |
+| 31 | **nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1** | 9B | 1,378 | 128,000 | 1.08% |
+| 32 | **HuggingFaceTB/SmolLM3-3B** | 3B | 1,378 | 128,000 | 1.08% |
+| 33 | **THUDM/GLM-4.1V-9B-Thinking** | 10B | 832 | 151,329 | 0.55% |
+| 34 | **unsloth/Step-3.7-Flash** | 201B | 629 | 128,000 | 0.49% |
+| 35 | **unsloth/DeepSeek-R1** | 684B | 629 | 128,000 | 0.49% |
+| 36 | **unsloth/DeepSeek-R1-0528** | N/A | 629 | 128,000 | 0.49% |
+| 37 | **unsloth/DeepSeek-Prover-V2-671B** | 671B | 629 | 128,000 | 0.49% |
+| 38 | **tngtech/DeepSeek-R1T-Chimera** | 685B | 629 | 128,000 | 0.49% |
+| 39 | **unsloth/LFM2.5-8B-A1B** | 8B | 430 | 124,893 | 0.34% |
+| 40 | **openbmb/MiniCPM4-8B** | 8B | 143 | 73,440 | 0.19% |
+| 41 | **Qwen/Qwen3-32B** | 33B | 127 | 151,643 | 0.08% |
+| 42 | **Qwen/Qwen3-235B-A22B** | 235B | 127 | 151,643 | 0.08% |
+| 43 | **Qwen/Qwen2.5-Omni-3B** | 6B | 127 | 151,643 | 0.08% |
+| 44 | **Loom-Labs/Apollo-1-4B** | 4B | 127 | 151,643 | 0.08% |
+| 45 | **deepseek-ai/DeepSeek-V2.5-1210** | 236B | 86 | 100,000 | 0.09% |
+| 46 | **unsloth/mistral-7b-v0.3** | 7B | 58 | 32,768 | 0.18% |
+| 47 | **unsloth/Mistral-Small-Instruct-2409** | 22B | 58 | 32,768 | 0.18% |
+| 48 | **microsoft/phi-4** | 15B | 44 | 100,352 | 0.04% |
+| 49 | **unsloth/granite-4.1-30b** | 29B | 44 | 100,352 | 0.04% |
+| 50 | **unsloth/granite-4.1-8b** | 9B | 44 | 100,352 | 0.04% |
+| 51 | **unsloth/granite-4.1-30b** | 29B | 44 | 100,352 | 0.04% |
+| 52 | **ibm-granite/granite-4.0-tiny-preview** | 7B | 42 | 49,152 | 0.09% |
+| 53 | **ibm-granite/granite-3.3-8b-instruct** | 8B | 42 | 49,152 | 0.09% |
+| 54 | **ibm-granite/granite-speech-3.3-8b** | 9B | 42 | 49,152 | 0.09% |
 
 
 ### By Percentage (Relative Performance)
@@ -101,55 +105,59 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | Rank | Model | Parameters | Percentage | Greek Tokens | Total Vocabulary |
 |------|-------|------------|------------|--------------|------------------|
 | 1 | **ilsp/Meltemi-7B-Instruct-v1.5** | 7B | 45.89% | 28,162 | 61,366 |
-| 2 | **ilsp/Llama-Krikri-8B-Instruct** | 8B | 14.88% | 22,212 | 149,248 |
-| 3 | **mlx-community/aya-expanse-32b-8bit** | 32B | 2.96% | 7,547 | 255,000 |
-| 4 | **kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit** | 9B | 2.20% | 2,816 | 128,000 |
-| 5 | **1-800-LLMs/tiny-aya-earth** | 3B | 1.77% | 4,622 | 261,000 |
-| 6 | **unsloth/NVIDIA-Nemotron-3-Nano-4B** | 4B | 1.15% | 1,507 | 131,072 |
-| 7 | **unsloth/Nemotron-3-Nano-30B-A3B** | 32B | 1.15% | 1,507 | 131,072 |
-| 8 | **unsloth/Devstral-Small-2505** | 24B | 1.15% | 1,507 | 131,072 |
-| 9 | **unsloth/Magistral-Small-2506** | 24B | 1.15% | 1,507 | 131,072 |
-| 10 | **unsloth/Mistral-Medium-3.5-128B** | 128B | 1.15% | 1,507 | 131,072 |
-| 11 | **unsloth/Mistral-Small-4-119B-2603** | 119B | 1.15% | 1,507 | 131,072 |
-| 12 | **unsloth/Mistral-Small-3.2-24B-Instruct-2506** | 24B | 1.15% | 1,507 | 131,072 |
-| 13 | **unsloth/Llama-3.2-3B-Instruct** | 3B | 1.08% | 1,378 | 128,000 |
-| 14 | **unsloth/llama-3-8b** | 8B | 1.08% | 1,378 | 128,000 |
-| 15 | **unsloth/Llama-3.3-70B-Instruct** | 71B | 1.08% | 1,378 | 128,000 |
-| 16 | **unsloth/Llama-3.1-Nemotron-Nano-8B-v1** | 8B | 1.08% | 1,378 | 128,000 |
-| 17 | **microsoft/bitnet-b1.58-2B-4T** | 1B | 1.08% | 1,378 | 128,000 |
-| 18 | **nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1** | 9B | 1.08% | 1,378 | 128,000 |
-| 19 | **HuggingFaceTB/SmolLM3-3B** | 3B | 1.08% | 1,378 | 128,000 |
-| 20 | **unsloth/Qwen3.5-27B** | 28B | 0.62% | 1,538 | 248,044 |
-| 21 | **unsloth/Qwen3.5-122B-A10B** | 125B | 0.62% | 1,538 | 248,044 |
-| 22 | **unsloth/Qwen3.6-35B-A3B** | 36B | 0.62% | 1,538 | 248,044 |
-| 23 | **unsloth/Qwen3.6-27B** | 28B | 0.62% | 1,538 | 248,044 |
-| 24 | **THUDM/GLM-4.1V-9B-Thinking** | 10B | 0.55% | 832 | 151,329 |
-| 25 | **unsloth/gemma-3-27b-it** | 27B | 0.54% | 1,409 | 262,144 |
-| 26 | **unsloth/gemma-4-12b-it** | 12B | 0.54% | 1,409 | 262,144 |
-| 27 | **unsloth/gemma-4-12b** | 12B | 0.54% | 1,409 | 262,144 |
-| 28 | **unsloth/gemma-4-E2B** | 5B | 0.54% | 1,409 | 262,144 |
-| 29 | **unsloth/gemma-4-E4B** | 8B | 0.54% | 1,409 | 262,144 |
-| 30 | **unsloth/gemma-4-31B** | 33B | 0.54% | 1,409 | 262,144 |
-| 31 | **unsloth/Step-3.7-Flash** | 201B | 0.49% | 629 | 128,000 |
-| 32 | **unsloth/DeepSeek-R1** | 684B | 0.49% | 629 | 128,000 |
-| 33 | **unsloth/DeepSeek-R1-0528** | N/A | 0.49% | 629 | 128,000 |
-| 34 | **unsloth/DeepSeek-Prover-V2-671B** | 671B | 0.49% | 629 | 128,000 |
-| 35 | **tngtech/DeepSeek-R1T-Chimera** | 685B | 0.49% | 629 | 128,000 |
-| 36 | **unsloth/LFM2.5-8B-A1B** | 8B | 0.34% | 430 | 124,893 |
-| 37 | **openbmb/MiniCPM4-8B** | 8B | 0.19% | 143 | 73,440 |
-| 38 | **unsloth/mistral-7b-v0.3** | 7B | 0.18% | 58 | 32,768 |
-| 39 | **unsloth/Mistral-Small-Instruct-2409** | 22B | 0.18% | 58 | 32,768 |
-| 40 | **deepseek-ai/DeepSeek-V2.5-1210** | 236B | 0.09% | 86 | 100,000 |
-| 41 | **ibm-granite/granite-4.0-tiny-preview** | 7B | 0.09% | 42 | 49,152 |
-| 42 | **ibm-granite/granite-3.3-8b-instruct** | 8B | 0.09% | 42 | 49,152 |
-| 43 | **ibm-granite/granite-speech-3.3-8b** | 9B | 0.09% | 42 | 49,152 |
-| 44 | **Qwen/Qwen3-32B** | 33B | 0.08% | 127 | 151,643 |
-| 45 | **Qwen/Qwen3-235B-A22B** | 235B | 0.08% | 127 | 151,643 |
-| 46 | **Qwen/Qwen2.5-Omni-3B** | 6B | 0.08% | 127 | 151,643 |
-| 47 | **microsoft/phi-4** | 15B | 0.04% | 44 | 100,352 |
-| 48 | **unsloth/granite-4.1-30b** | 29B | 0.04% | 44 | 100,352 |
-| 49 | **unsloth/granite-4.1-8b** | 9B | 0.04% | 44 | 100,352 |
-| 50 | **unsloth/granite-4.1-30b** | 29B | 0.04% | 44 | 100,352 |
+| 2 | **ASiatras/Chios_Chatbot** | 1B | 45.88% | 28,152 | 61,362 |
+| 3 | **ilsp/Llama-Krikri-8B-Instruct** | 8B | 14.88% | 22,212 | 149,248 |
+| 4 | **kyutai/helium-1-2b** | 2B | 5.97% | 3,820 | 64,000 |
+| 5 | **mlx-community/aya-expanse-32b-8bit** | 32B | 2.96% | 7,547 | 255,000 |
+| 6 | **kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit** | 9B | 2.20% | 2,816 | 128,000 |
+| 7 | **utter-project/EuroMoE-2.6B-A0.6B-2512** | 3B | 2.20% | 2,816 | 128,000 |
+| 8 | **1-800-LLMs/tiny-aya-earth** | 3B | 1.77% | 4,622 | 261,000 |
+| 9 | **unsloth/NVIDIA-Nemotron-3-Nano-4B** | 4B | 1.15% | 1,507 | 131,072 |
+| 10 | **unsloth/Nemotron-3-Nano-30B-A3B** | 32B | 1.15% | 1,507 | 131,072 |
+| 11 | **unsloth/Devstral-Small-2505** | 24B | 1.15% | 1,507 | 131,072 |
+| 12 | **unsloth/Magistral-Small-2506** | 24B | 1.15% | 1,507 | 131,072 |
+| 13 | **unsloth/Mistral-Medium-3.5-128B** | 128B | 1.15% | 1,507 | 131,072 |
+| 14 | **unsloth/Mistral-Small-4-119B-2603** | 119B | 1.15% | 1,507 | 131,072 |
+| 15 | **unsloth/Mistral-Small-3.2-24B-Instruct-2506** | 24B | 1.15% | 1,507 | 131,072 |
+| 16 | **unsloth/Llama-3.2-3B-Instruct** | 3B | 1.08% | 1,378 | 128,000 |
+| 17 | **unsloth/llama-3-8b** | 8B | 1.08% | 1,378 | 128,000 |
+| 18 | **unsloth/Llama-3.3-70B-Instruct** | 71B | 1.08% | 1,378 | 128,000 |
+| 19 | **unsloth/Llama-3.1-Nemotron-Nano-8B-v1** | 8B | 1.08% | 1,378 | 128,000 |
+| 20 | **microsoft/bitnet-b1.58-2B-4T** | 1B | 1.08% | 1,378 | 128,000 |
+| 21 | **nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1** | 9B | 1.08% | 1,378 | 128,000 |
+| 22 | **HuggingFaceTB/SmolLM3-3B** | 3B | 1.08% | 1,378 | 128,000 |
+| 23 | **unsloth/Qwen3.5-27B** | 28B | 0.62% | 1,538 | 248,044 |
+| 24 | **unsloth/Qwen3.5-122B-A10B** | 125B | 0.62% | 1,538 | 248,044 |
+| 25 | **unsloth/Qwen3.6-35B-A3B** | 36B | 0.62% | 1,538 | 248,044 |
+| 26 | **unsloth/Qwen3.6-27B** | 28B | 0.62% | 1,538 | 248,044 |
+| 27 | **THUDM/GLM-4.1V-9B-Thinking** | 10B | 0.55% | 832 | 151,329 |
+| 28 | **unsloth/gemma-3-27b-it** | 27B | 0.54% | 1,409 | 262,144 |
+| 29 | **unsloth/gemma-4-12b-it** | 12B | 0.54% | 1,409 | 262,144 |
+| 30 | **unsloth/gemma-4-12b** | 12B | 0.54% | 1,409 | 262,144 |
+| 31 | **unsloth/gemma-4-E2B** | 5B | 0.54% | 1,409 | 262,144 |
+| 32 | **unsloth/gemma-4-E4B** | 8B | 0.54% | 1,409 | 262,144 |
+| 33 | **unsloth/gemma-4-31B** | 33B | 0.54% | 1,409 | 262,144 |
+| 34 | **unsloth/Step-3.7-Flash** | 201B | 0.49% | 629 | 128,000 |
+| 35 | **unsloth/DeepSeek-R1** | 684B | 0.49% | 629 | 128,000 |
+| 36 | **unsloth/DeepSeek-R1-0528** | N/A | 0.49% | 629 | 128,000 |
+| 37 | **unsloth/DeepSeek-Prover-V2-671B** | 671B | 0.49% | 629 | 128,000 |
+| 38 | **tngtech/DeepSeek-R1T-Chimera** | 685B | 0.49% | 629 | 128,000 |
+| 39 | **unsloth/LFM2.5-8B-A1B** | 8B | 0.34% | 430 | 124,893 |
+| 40 | **openbmb/MiniCPM4-8B** | 8B | 0.19% | 143 | 73,440 |
+| 41 | **unsloth/mistral-7b-v0.3** | 7B | 0.18% | 58 | 32,768 |
+| 42 | **unsloth/Mistral-Small-Instruct-2409** | 22B | 0.18% | 58 | 32,768 |
+| 43 | **deepseek-ai/DeepSeek-V2.5-1210** | 236B | 0.09% | 86 | 100,000 |
+| 44 | **ibm-granite/granite-4.0-tiny-preview** | 7B | 0.09% | 42 | 49,152 |
+| 45 | **ibm-granite/granite-3.3-8b-instruct** | 8B | 0.09% | 42 | 49,152 |
+| 46 | **ibm-granite/granite-speech-3.3-8b** | 9B | 0.09% | 42 | 49,152 |
+| 47 | **Qwen/Qwen3-32B** | 33B | 0.08% | 127 | 151,643 |
+| 48 | **Qwen/Qwen3-235B-A22B** | 235B | 0.08% | 127 | 151,643 |
+| 49 | **Qwen/Qwen2.5-Omni-3B** | 6B | 0.08% | 127 | 151,643 |
+| 50 | **Loom-Labs/Apollo-1-4B** | 4B | 0.08% | 127 | 151,643 |
+| 51 | **microsoft/phi-4** | 15B | 0.04% | 44 | 100,352 |
+| 52 | **unsloth/granite-4.1-30b** | 29B | 0.04% | 44 | 100,352 |
+| 53 | **unsloth/granite-4.1-8b** | 9B | 0.04% | 44 | 100,352 |
+| 54 | **unsloth/granite-4.1-30b** | 29B | 0.04% | 44 | 100,352 |
 
 
 ## Latin Performance Rankings
@@ -182,32 +190,36 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | 22 | **Qwen/Qwen3-32B** | 33B | 93,859 | 151,643 | 61.89% |
 | 23 | **Qwen/Qwen3-235B-A22B** | 235B | 93,859 | 151,643 | 61.89% |
 | 24 | **Qwen/Qwen2.5-Omni-3B** | 6B | 93,859 | 151,643 | 61.89% |
-| 25 | **kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit** | 9B | 91,179 | 128,000 | 71.23% |
-| 26 | **microsoft/phi-4** | 15B | 89,643 | 100,352 | 89.33% |
-| 27 | **unsloth/granite-4.1-30b** | 29B | 89,643 | 100,352 | 89.33% |
-| 28 | **unsloth/granite-4.1-8b** | 9B | 89,643 | 100,352 | 89.33% |
+| 25 | **Loom-Labs/Apollo-1-4B** | 4B | 93,859 | 151,643 | 61.89% |
+| 26 | **kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit** | 9B | 91,179 | 128,000 | 71.23% |
+| 27 | **utter-project/EuroMoE-2.6B-A0.6B-2512** | 3B | 91,179 | 128,000 | 71.23% |
+| 28 | **microsoft/phi-4** | 15B | 89,643 | 100,352 | 89.33% |
 | 29 | **unsloth/granite-4.1-30b** | 29B | 89,643 | 100,352 | 89.33% |
-| 30 | **unsloth/NVIDIA-Nemotron-3-Nano-4B** | 4B | 87,986 | 131,072 | 67.13% |
-| 31 | **unsloth/Nemotron-3-Nano-30B-A3B** | 32B | 87,986 | 131,072 | 67.13% |
-| 32 | **unsloth/Devstral-Small-2505** | 24B | 87,986 | 131,072 | 67.13% |
-| 33 | **unsloth/Magistral-Small-2506** | 24B | 87,986 | 131,072 | 67.13% |
-| 34 | **unsloth/Mistral-Medium-3.5-128B** | 128B | 87,986 | 131,072 | 67.13% |
-| 35 | **unsloth/Mistral-Small-4-119B-2603** | 119B | 87,986 | 131,072 | 67.13% |
-| 36 | **unsloth/Mistral-Small-3.2-24B-Instruct-2506** | 24B | 87,986 | 131,072 | 67.13% |
-| 37 | **unsloth/LFM2.5-8B-A1B** | 8B | 86,283 | 124,893 | 69.09% |
-| 38 | **unsloth/Step-3.7-Flash** | 201B | 71,454 | 128,000 | 55.82% |
-| 39 | **unsloth/DeepSeek-R1** | 684B | 71,454 | 128,000 | 55.82% |
-| 40 | **unsloth/DeepSeek-R1-0528** | N/A | 71,454 | 128,000 | 55.82% |
-| 41 | **unsloth/DeepSeek-Prover-V2-671B** | 671B | 71,454 | 128,000 | 55.82% |
-| 42 | **tngtech/DeepSeek-R1T-Chimera** | 685B | 71,454 | 128,000 | 55.82% |
-| 43 | **deepseek-ai/DeepSeek-V2.5-1210** | 236B | 70,489 | 100,000 | 70.49% |
-| 44 | **ibm-granite/granite-4.0-tiny-preview** | 7B | 40,302 | 49,152 | 81.99% |
-| 45 | **ibm-granite/granite-3.3-8b-instruct** | 8B | 40,302 | 49,152 | 81.99% |
-| 46 | **ibm-granite/granite-speech-3.3-8b** | 9B | 40,302 | 49,152 | 81.99% |
-| 47 | **openbmb/MiniCPM4-8B** | 8B | 36,406 | 73,440 | 49.57% |
-| 48 | **ilsp/Meltemi-7B-Instruct-v1.5** | 7B | 25,948 | 61,366 | 42.28% |
-| 49 | **unsloth/mistral-7b-v0.3** | 7B | 25,723 | 32,768 | 78.50% |
-| 50 | **unsloth/Mistral-Small-Instruct-2409** | 22B | 25,723 | 32,768 | 78.50% |
+| 30 | **unsloth/granite-4.1-8b** | 9B | 89,643 | 100,352 | 89.33% |
+| 31 | **unsloth/granite-4.1-30b** | 29B | 89,643 | 100,352 | 89.33% |
+| 32 | **unsloth/NVIDIA-Nemotron-3-Nano-4B** | 4B | 87,986 | 131,072 | 67.13% |
+| 33 | **unsloth/Nemotron-3-Nano-30B-A3B** | 32B | 87,986 | 131,072 | 67.13% |
+| 34 | **unsloth/Devstral-Small-2505** | 24B | 87,986 | 131,072 | 67.13% |
+| 35 | **unsloth/Magistral-Small-2506** | 24B | 87,986 | 131,072 | 67.13% |
+| 36 | **unsloth/Mistral-Medium-3.5-128B** | 128B | 87,986 | 131,072 | 67.13% |
+| 37 | **unsloth/Mistral-Small-4-119B-2603** | 119B | 87,986 | 131,072 | 67.13% |
+| 38 | **unsloth/Mistral-Small-3.2-24B-Instruct-2506** | 24B | 87,986 | 131,072 | 67.13% |
+| 39 | **unsloth/LFM2.5-8B-A1B** | 8B | 86,283 | 124,893 | 69.09% |
+| 40 | **unsloth/Step-3.7-Flash** | 201B | 71,454 | 128,000 | 55.82% |
+| 41 | **unsloth/DeepSeek-R1** | 684B | 71,454 | 128,000 | 55.82% |
+| 42 | **unsloth/DeepSeek-R1-0528** | N/A | 71,454 | 128,000 | 55.82% |
+| 43 | **unsloth/DeepSeek-Prover-V2-671B** | 671B | 71,454 | 128,000 | 55.82% |
+| 44 | **tngtech/DeepSeek-R1T-Chimera** | 685B | 71,454 | 128,000 | 55.82% |
+| 45 | **deepseek-ai/DeepSeek-V2.5-1210** | 236B | 70,489 | 100,000 | 70.49% |
+| 46 | **kyutai/helium-1-2b** | 2B | 56,414 | 64,000 | 88.15% |
+| 47 | **ibm-granite/granite-4.0-tiny-preview** | 7B | 40,302 | 49,152 | 81.99% |
+| 48 | **ibm-granite/granite-3.3-8b-instruct** | 8B | 40,302 | 49,152 | 81.99% |
+| 49 | **ibm-granite/granite-speech-3.3-8b** | 9B | 40,302 | 49,152 | 81.99% |
+| 50 | **openbmb/MiniCPM4-8B** | 8B | 36,406 | 73,440 | 49.57% |
+| 51 | **ilsp/Meltemi-7B-Instruct-v1.5** | 7B | 25,948 | 61,366 | 42.28% |
+| 52 | **ASiatras/Chios_Chatbot** | 1B | 25,945 | 61,362 | 42.28% |
+| 53 | **unsloth/mistral-7b-v0.3** | 7B | 25,723 | 32,768 | 78.50% |
+| 54 | **unsloth/Mistral-Small-Instruct-2409** | 22B | 25,723 | 32,768 | 78.50% |
 
 
 ### By Percentage (Relative Performance)
@@ -218,52 +230,56 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | 2 | **unsloth/granite-4.1-30b** | 29B | 89.33% | 89,643 | 100,352 |
 | 3 | **unsloth/granite-4.1-8b** | 9B | 89.33% | 89,643 | 100,352 |
 | 4 | **unsloth/granite-4.1-30b** | 29B | 89.33% | 89,643 | 100,352 |
-| 5 | **ibm-granite/granite-4.0-tiny-preview** | 7B | 81.99% | 40,302 | 49,152 |
-| 6 | **ibm-granite/granite-3.3-8b-instruct** | 8B | 81.99% | 40,302 | 49,152 |
-| 7 | **ibm-granite/granite-speech-3.3-8b** | 9B | 81.99% | 40,302 | 49,152 |
-| 8 | **unsloth/mistral-7b-v0.3** | 7B | 78.50% | 25,723 | 32,768 |
-| 9 | **unsloth/Mistral-Small-Instruct-2409** | 22B | 78.50% | 25,723 | 32,768 |
-| 10 | **unsloth/Llama-3.2-3B-Instruct** | 3B | 75.54% | 96,687 | 128,000 |
-| 11 | **unsloth/llama-3-8b** | 8B | 75.54% | 96,687 | 128,000 |
-| 12 | **unsloth/Llama-3.3-70B-Instruct** | 71B | 75.54% | 96,687 | 128,000 |
-| 13 | **unsloth/Llama-3.1-Nemotron-Nano-8B-v1** | 8B | 75.54% | 96,687 | 128,000 |
-| 14 | **microsoft/bitnet-b1.58-2B-4T** | 1B | 75.54% | 96,687 | 128,000 |
-| 15 | **nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1** | 9B | 75.54% | 96,687 | 128,000 |
-| 16 | **HuggingFaceTB/SmolLM3-3B** | 3B | 75.54% | 96,687 | 128,000 |
-| 17 | **kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit** | 9B | 71.23% | 91,179 | 128,000 |
-| 18 | **deepseek-ai/DeepSeek-V2.5-1210** | 236B | 70.49% | 70,489 | 100,000 |
-| 19 | **unsloth/LFM2.5-8B-A1B** | 8B | 69.09% | 86,283 | 124,893 |
-| 20 | **mlx-community/aya-expanse-32b-8bit** | 32B | 68.12% | 173,699 | 255,000 |
-| 21 | **unsloth/NVIDIA-Nemotron-3-Nano-4B** | 4B | 67.13% | 87,986 | 131,072 |
-| 22 | **unsloth/Nemotron-3-Nano-30B-A3B** | 32B | 67.13% | 87,986 | 131,072 |
-| 23 | **unsloth/Devstral-Small-2505** | 24B | 67.13% | 87,986 | 131,072 |
-| 24 | **unsloth/Magistral-Small-2506** | 24B | 67.13% | 87,986 | 131,072 |
-| 25 | **unsloth/Mistral-Medium-3.5-128B** | 128B | 67.13% | 87,986 | 131,072 |
-| 26 | **unsloth/Mistral-Small-4-119B-2603** | 119B | 67.13% | 87,986 | 131,072 |
-| 27 | **unsloth/Mistral-Small-3.2-24B-Instruct-2506** | 24B | 67.13% | 87,986 | 131,072 |
-| 28 | **THUDM/GLM-4.1V-9B-Thinking** | 10B | 66.30% | 100,326 | 151,329 |
-| 29 | **ilsp/Llama-Krikri-8B-Instruct** | 8B | 64.79% | 96,699 | 149,248 |
-| 30 | **Qwen/Qwen3-32B** | 33B | 61.89% | 93,859 | 151,643 |
-| 31 | **Qwen/Qwen3-235B-A22B** | 235B | 61.89% | 93,859 | 151,643 |
-| 32 | **Qwen/Qwen2.5-Omni-3B** | 6B | 61.89% | 93,859 | 151,643 |
-| 33 | **1-800-LLMs/tiny-aya-earth** | 3B | 58.80% | 153,473 | 261,000 |
-| 34 | **unsloth/gemma-3-27b-it** | 27B | 57.88% | 151,739 | 262,144 |
-| 35 | **unsloth/gemma-4-12b-it** | 12B | 57.88% | 151,739 | 262,144 |
-| 36 | **unsloth/gemma-4-12b** | 12B | 57.88% | 151,739 | 262,144 |
-| 37 | **unsloth/gemma-4-E2B** | 5B | 57.88% | 151,739 | 262,144 |
-| 38 | **unsloth/gemma-4-E4B** | 8B | 57.88% | 151,739 | 262,144 |
-| 39 | **unsloth/gemma-4-31B** | 33B | 57.88% | 151,739 | 262,144 |
-| 40 | **unsloth/Step-3.7-Flash** | 201B | 55.82% | 71,454 | 128,000 |
-| 41 | **unsloth/DeepSeek-R1** | 684B | 55.82% | 71,454 | 128,000 |
-| 42 | **unsloth/DeepSeek-R1-0528** | N/A | 55.82% | 71,454 | 128,000 |
-| 43 | **unsloth/DeepSeek-Prover-V2-671B** | 671B | 55.82% | 71,454 | 128,000 |
-| 44 | **tngtech/DeepSeek-R1T-Chimera** | 685B | 55.82% | 71,454 | 128,000 |
-| 45 | **unsloth/Qwen3.5-27B** | 28B | 55.55% | 137,780 | 248,044 |
-| 46 | **unsloth/Qwen3.5-122B-A10B** | 125B | 55.55% | 137,780 | 248,044 |
-| 47 | **unsloth/Qwen3.6-35B-A3B** | 36B | 55.55% | 137,780 | 248,044 |
-| 48 | **unsloth/Qwen3.6-27B** | 28B | 55.55% | 137,780 | 248,044 |
-| 49 | **openbmb/MiniCPM4-8B** | 8B | 49.57% | 36,406 | 73,440 |
-| 50 | **ilsp/Meltemi-7B-Instruct-v1.5** | 7B | 42.28% | 25,948 | 61,366 |
+| 5 | **kyutai/helium-1-2b** | 2B | 88.15% | 56,414 | 64,000 |
+| 6 | **ibm-granite/granite-4.0-tiny-preview** | 7B | 81.99% | 40,302 | 49,152 |
+| 7 | **ibm-granite/granite-3.3-8b-instruct** | 8B | 81.99% | 40,302 | 49,152 |
+| 8 | **ibm-granite/granite-speech-3.3-8b** | 9B | 81.99% | 40,302 | 49,152 |
+| 9 | **unsloth/mistral-7b-v0.3** | 7B | 78.50% | 25,723 | 32,768 |
+| 10 | **unsloth/Mistral-Small-Instruct-2409** | 22B | 78.50% | 25,723 | 32,768 |
+| 11 | **unsloth/Llama-3.2-3B-Instruct** | 3B | 75.54% | 96,687 | 128,000 |
+| 12 | **unsloth/llama-3-8b** | 8B | 75.54% | 96,687 | 128,000 |
+| 13 | **unsloth/Llama-3.3-70B-Instruct** | 71B | 75.54% | 96,687 | 128,000 |
+| 14 | **unsloth/Llama-3.1-Nemotron-Nano-8B-v1** | 8B | 75.54% | 96,687 | 128,000 |
+| 15 | **microsoft/bitnet-b1.58-2B-4T** | 1B | 75.54% | 96,687 | 128,000 |
+| 16 | **nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1** | 9B | 75.54% | 96,687 | 128,000 |
+| 17 | **HuggingFaceTB/SmolLM3-3B** | 3B | 75.54% | 96,687 | 128,000 |
+| 18 | **kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit** | 9B | 71.23% | 91,179 | 128,000 |
+| 19 | **utter-project/EuroMoE-2.6B-A0.6B-2512** | 3B | 71.23% | 91,179 | 128,000 |
+| 20 | **deepseek-ai/DeepSeek-V2.5-1210** | 236B | 70.49% | 70,489 | 100,000 |
+| 21 | **unsloth/LFM2.5-8B-A1B** | 8B | 69.09% | 86,283 | 124,893 |
+| 22 | **mlx-community/aya-expanse-32b-8bit** | 32B | 68.12% | 173,699 | 255,000 |
+| 23 | **unsloth/NVIDIA-Nemotron-3-Nano-4B** | 4B | 67.13% | 87,986 | 131,072 |
+| 24 | **unsloth/Nemotron-3-Nano-30B-A3B** | 32B | 67.13% | 87,986 | 131,072 |
+| 25 | **unsloth/Devstral-Small-2505** | 24B | 67.13% | 87,986 | 131,072 |
+| 26 | **unsloth/Magistral-Small-2506** | 24B | 67.13% | 87,986 | 131,072 |
+| 27 | **unsloth/Mistral-Medium-3.5-128B** | 128B | 67.13% | 87,986 | 131,072 |
+| 28 | **unsloth/Mistral-Small-4-119B-2603** | 119B | 67.13% | 87,986 | 131,072 |
+| 29 | **unsloth/Mistral-Small-3.2-24B-Instruct-2506** | 24B | 67.13% | 87,986 | 131,072 |
+| 30 | **THUDM/GLM-4.1V-9B-Thinking** | 10B | 66.30% | 100,326 | 151,329 |
+| 31 | **ilsp/Llama-Krikri-8B-Instruct** | 8B | 64.79% | 96,699 | 149,248 |
+| 32 | **Qwen/Qwen3-32B** | 33B | 61.89% | 93,859 | 151,643 |
+| 33 | **Qwen/Qwen3-235B-A22B** | 235B | 61.89% | 93,859 | 151,643 |
+| 34 | **Qwen/Qwen2.5-Omni-3B** | 6B | 61.89% | 93,859 | 151,643 |
+| 35 | **Loom-Labs/Apollo-1-4B** | 4B | 61.89% | 93,859 | 151,643 |
+| 36 | **1-800-LLMs/tiny-aya-earth** | 3B | 58.80% | 153,473 | 261,000 |
+| 37 | **unsloth/gemma-3-27b-it** | 27B | 57.88% | 151,739 | 262,144 |
+| 38 | **unsloth/gemma-4-12b-it** | 12B | 57.88% | 151,739 | 262,144 |
+| 39 | **unsloth/gemma-4-12b** | 12B | 57.88% | 151,739 | 262,144 |
+| 40 | **unsloth/gemma-4-E2B** | 5B | 57.88% | 151,739 | 262,144 |
+| 41 | **unsloth/gemma-4-E4B** | 8B | 57.88% | 151,739 | 262,144 |
+| 42 | **unsloth/gemma-4-31B** | 33B | 57.88% | 151,739 | 262,144 |
+| 43 | **unsloth/Step-3.7-Flash** | 201B | 55.82% | 71,454 | 128,000 |
+| 44 | **unsloth/DeepSeek-R1** | 684B | 55.82% | 71,454 | 128,000 |
+| 45 | **unsloth/DeepSeek-R1-0528** | N/A | 55.82% | 71,454 | 128,000 |
+| 46 | **unsloth/DeepSeek-Prover-V2-671B** | 671B | 55.82% | 71,454 | 128,000 |
+| 47 | **tngtech/DeepSeek-R1T-Chimera** | 685B | 55.82% | 71,454 | 128,000 |
+| 48 | **unsloth/Qwen3.5-27B** | 28B | 55.55% | 137,780 | 248,044 |
+| 49 | **unsloth/Qwen3.5-122B-A10B** | 125B | 55.55% | 137,780 | 248,044 |
+| 50 | **unsloth/Qwen3.6-35B-A3B** | 36B | 55.55% | 137,780 | 248,044 |
+| 51 | **unsloth/Qwen3.6-27B** | 28B | 55.55% | 137,780 | 248,044 |
+| 52 | **openbmb/MiniCPM4-8B** | 8B | 49.57% | 36,406 | 73,440 |
+| 53 | **ilsp/Meltemi-7B-Instruct-v1.5** | 7B | 42.28% | 25,948 | 61,366 |
+| 54 | **ASiatras/Chios_Chatbot** | 1B | 42.28% | 25,945 | 61,362 |
 
 
 ## Comparative Analysis
@@ -272,56 +288,60 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 
 | Model | Parameters | Total Vocabulary | Visual Scale | Relative Size |
 |-------|------------|------------------|--------------|---------------|
-| **unsloth/gemma-3-27b-it** | 27B | 262,144 |  | 177.3% of avg |
-| **unsloth/gemma-4-12b-it** | 12B | 262,144 |  | 177.3% of avg |
-| **unsloth/gemma-4-12b** | 12B | 262,144 |  | 177.3% of avg |
-| **unsloth/gemma-4-E2B** | 5B | 262,144 |  | 177.3% of avg |
-| **unsloth/gemma-4-E4B** | 8B | 262,144 |  | 177.3% of avg |
-| **unsloth/gemma-4-31B** | 33B | 262,144 |  | 177.3% of avg |
-| **1-800-LLMs/tiny-aya-earth** | 3B | 261,000 |  | 176.5% of avg |
-| **mlx-community/aya-expanse-32b-8bit** | 32B | 255,000 |  | 172.5% of avg |
-| **unsloth/Qwen3.5-27B** | 28B | 248,044 |  | 167.8% of avg |
-| **unsloth/Qwen3.5-122B-A10B** | 125B | 248,044 |  | 167.8% of avg |
-| **unsloth/Qwen3.6-35B-A3B** | 36B | 248,044 |  | 167.8% of avg |
-| **unsloth/Qwen3.6-27B** | 28B | 248,044 |  | 167.8% of avg |
-| **Qwen/Qwen3-32B** | 33B | 151,643 |  | 102.6% of avg |
-| **Qwen/Qwen3-235B-A22B** | 235B | 151,643 |  | 102.6% of avg |
-| **Qwen/Qwen2.5-Omni-3B** | 6B | 151,643 |  | 102.6% of avg |
-| **THUDM/GLM-4.1V-9B-Thinking** | 10B | 151,329 |  | 102.4% of avg |
-| **ilsp/Llama-Krikri-8B-Instruct** | 8B | 149,248 |  | 101.0% of avg |
-| **unsloth/NVIDIA-Nemotron-3-Nano-4B** | 4B | 131,072 |  | 88.7% of avg |
-| **unsloth/Nemotron-3-Nano-30B-A3B** | 32B | 131,072 |  | 88.7% of avg |
-| **unsloth/Devstral-Small-2505** | 24B | 131,072 |  | 88.7% of avg |
-| **unsloth/Magistral-Small-2506** | 24B | 131,072 |  | 88.7% of avg |
-| **unsloth/Mistral-Medium-3.5-128B** | 128B | 131,072 |  | 88.7% of avg |
-| **unsloth/Mistral-Small-4-119B-2603** | 119B | 131,072 |  | 88.7% of avg |
-| **unsloth/Mistral-Small-3.2-24B-Instruct-2506** | 24B | 131,072 |  | 88.7% of avg |
-| **unsloth/Llama-3.2-3B-Instruct** | 3B | 128,000 |  | 86.6% of avg |
-| **unsloth/llama-3-8b** | 8B | 128,000 |  | 86.6% of avg |
-| **unsloth/Llama-3.3-70B-Instruct** | 71B | 128,000 |  | 86.6% of avg |
-| **kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit** | 9B | 128,000 |  | 86.6% of avg |
-| **unsloth/Llama-3.1-Nemotron-Nano-8B-v1** | 8B | 128,000 |  | 86.6% of avg |
-| **unsloth/Step-3.7-Flash** | 201B | 128,000 |  | 86.6% of avg |
-| **unsloth/DeepSeek-R1** | 684B | 128,000 |  | 86.6% of avg |
-| **unsloth/DeepSeek-R1-0528** | N/A | 128,000 |  | 86.6% of avg |
-| **unsloth/DeepSeek-Prover-V2-671B** | 671B | 128,000 |  | 86.6% of avg |
-| **tngtech/DeepSeek-R1T-Chimera** | 685B | 128,000 |  | 86.6% of avg |
-| **microsoft/bitnet-b1.58-2B-4T** | 1B | 128,000 |  | 86.6% of avg |
-| **nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1** | 9B | 128,000 |  | 86.6% of avg |
-| **HuggingFaceTB/SmolLM3-3B** | 3B | 128,000 |  | 86.6% of avg |
-| **unsloth/LFM2.5-8B-A1B** | 8B | 124,893 |  | 84.5% of avg |
-| **microsoft/phi-4** | 15B | 100,352 |  | 67.9% of avg |
-| **unsloth/granite-4.1-30b** | 29B | 100,352 |  | 67.9% of avg |
-| **unsloth/granite-4.1-8b** | 9B | 100,352 |  | 67.9% of avg |
-| **unsloth/granite-4.1-30b** | 29B | 100,352 |  | 67.9% of avg |
-| **deepseek-ai/DeepSeek-V2.5-1210** | 236B | 100,000 |  | 67.6% of avg |
-| **openbmb/MiniCPM4-8B** | 8B | 73,440 |  | 49.7% of avg |
-| **ilsp/Meltemi-7B-Instruct-v1.5** | 7B | 61,366 |  | 41.5% of avg |
-| **ibm-granite/granite-4.0-tiny-preview** | 7B | 49,152 |  | 33.2% of avg |
-| **ibm-granite/granite-3.3-8b-instruct** | 8B | 49,152 |  | 33.2% of avg |
-| **ibm-granite/granite-speech-3.3-8b** | 9B | 49,152 |  | 33.2% of avg |
-| **unsloth/mistral-7b-v0.3** | 7B | 32,768 |  | 22.2% of avg |
-| **unsloth/Mistral-Small-Instruct-2409** | 22B | 32,768 |  | 22.2% of avg |
+| **unsloth/gemma-3-27b-it** | 27B | 262,144 |  | 181.6% of avg |
+| **unsloth/gemma-4-12b-it** | 12B | 262,144 |  | 181.6% of avg |
+| **unsloth/gemma-4-12b** | 12B | 262,144 |  | 181.6% of avg |
+| **unsloth/gemma-4-E2B** | 5B | 262,144 |  | 181.6% of avg |
+| **unsloth/gemma-4-E4B** | 8B | 262,144 |  | 181.6% of avg |
+| **unsloth/gemma-4-31B** | 33B | 262,144 |  | 181.6% of avg |
+| **1-800-LLMs/tiny-aya-earth** | 3B | 261,000 |  | 180.8% of avg |
+| **mlx-community/aya-expanse-32b-8bit** | 32B | 255,000 |  | 176.6% of avg |
+| **unsloth/Qwen3.5-27B** | 28B | 248,044 |  | 171.8% of avg |
+| **unsloth/Qwen3.5-122B-A10B** | 125B | 248,044 |  | 171.8% of avg |
+| **unsloth/Qwen3.6-35B-A3B** | 36B | 248,044 |  | 171.8% of avg |
+| **unsloth/Qwen3.6-27B** | 28B | 248,044 |  | 171.8% of avg |
+| **Qwen/Qwen3-32B** | 33B | 151,643 |  | 105.0% of avg |
+| **Qwen/Qwen3-235B-A22B** | 235B | 151,643 |  | 105.0% of avg |
+| **Qwen/Qwen2.5-Omni-3B** | 6B | 151,643 |  | 105.0% of avg |
+| **Loom-Labs/Apollo-1-4B** | 4B | 151,643 |  | 105.0% of avg |
+| **THUDM/GLM-4.1V-9B-Thinking** | 10B | 151,329 |  | 104.8% of avg |
+| **ilsp/Llama-Krikri-8B-Instruct** | 8B | 149,248 |  | 103.4% of avg |
+| **unsloth/NVIDIA-Nemotron-3-Nano-4B** | 4B | 131,072 |  | 90.8% of avg |
+| **unsloth/Nemotron-3-Nano-30B-A3B** | 32B | 131,072 |  | 90.8% of avg |
+| **unsloth/Devstral-Small-2505** | 24B | 131,072 |  | 90.8% of avg |
+| **unsloth/Magistral-Small-2506** | 24B | 131,072 |  | 90.8% of avg |
+| **unsloth/Mistral-Medium-3.5-128B** | 128B | 131,072 |  | 90.8% of avg |
+| **unsloth/Mistral-Small-4-119B-2603** | 119B | 131,072 |  | 90.8% of avg |
+| **unsloth/Mistral-Small-3.2-24B-Instruct-2506** | 24B | 131,072 |  | 90.8% of avg |
+| **unsloth/Llama-3.2-3B-Instruct** | 3B | 128,000 |  | 88.6% of avg |
+| **unsloth/llama-3-8b** | 8B | 128,000 |  | 88.6% of avg |
+| **unsloth/Llama-3.3-70B-Instruct** | 71B | 128,000 |  | 88.6% of avg |
+| **kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit** | 9B | 128,000 |  | 88.6% of avg |
+| **unsloth/Llama-3.1-Nemotron-Nano-8B-v1** | 8B | 128,000 |  | 88.6% of avg |
+| **unsloth/Step-3.7-Flash** | 201B | 128,000 |  | 88.6% of avg |
+| **unsloth/DeepSeek-R1** | 684B | 128,000 |  | 88.6% of avg |
+| **unsloth/DeepSeek-R1-0528** | N/A | 128,000 |  | 88.6% of avg |
+| **unsloth/DeepSeek-Prover-V2-671B** | 671B | 128,000 |  | 88.6% of avg |
+| **tngtech/DeepSeek-R1T-Chimera** | 685B | 128,000 |  | 88.6% of avg |
+| **microsoft/bitnet-b1.58-2B-4T** | 1B | 128,000 |  | 88.6% of avg |
+| **nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1** | 9B | 128,000 |  | 88.6% of avg |
+| **HuggingFaceTB/SmolLM3-3B** | 3B | 128,000 |  | 88.6% of avg |
+| **utter-project/EuroMoE-2.6B-A0.6B-2512** | 3B | 128,000 |  | 88.6% of avg |
+| **unsloth/LFM2.5-8B-A1B** | 8B | 124,893 |  | 86.5% of avg |
+| **microsoft/phi-4** | 15B | 100,352 |  | 69.5% of avg |
+| **unsloth/granite-4.1-30b** | 29B | 100,352 |  | 69.5% of avg |
+| **unsloth/granite-4.1-8b** | 9B | 100,352 |  | 69.5% of avg |
+| **unsloth/granite-4.1-30b** | 29B | 100,352 |  | 69.5% of avg |
+| **deepseek-ai/DeepSeek-V2.5-1210** | 236B | 100,000 |  | 69.3% of avg |
+| **openbmb/MiniCPM4-8B** | 8B | 73,440 |  | 50.9% of avg |
+| **kyutai/helium-1-2b** | 2B | 64,000 |  | 44.3% of avg |
+| **ilsp/Meltemi-7B-Instruct-v1.5** | 7B | 61,366 |  | 42.5% of avg |
+| **ASiatras/Chios_Chatbot** | 1B | 61,362 |  | 42.5% of avg |
+| **ibm-granite/granite-4.0-tiny-preview** | 7B | 49,152 |  | 34.0% of avg |
+| **ibm-granite/granite-3.3-8b-instruct** | 8B | 49,152 |  | 34.0% of avg |
+| **ibm-granite/granite-speech-3.3-8b** | 9B | 49,152 |  | 34.0% of avg |
+| **unsloth/mistral-7b-v0.3** | 7B | 32,768 |  | 22.7% of avg |
+| **unsloth/Mistral-Small-Instruct-2409** | 22B | 32,768 |  | 22.7% of avg |
 
 
 ### Greek Support Comparison
@@ -329,55 +349,59 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | Rank | Model | Greek Percentage | Greek Tokens | Visual |
 |------|-------|------------------|--------------|--------|
 | 1 | **ilsp/Meltemi-7B-Instruct-v1.5** | 45.89% | 28,162 | 🟩🟩🟩🟩🟩 |
-| 2 | **ilsp/Llama-Krikri-8B-Instruct** | 14.88% | 22,212 | 🟩🟩🟩🟩🟩 |
-| 3 | **mlx-community/aya-expanse-32b-8bit** | 2.96% | 7,547 | 🟩🟩🟩🟩🟩 |
-| 4 | **1-800-LLMs/tiny-aya-earth** | 1.77% | 4,622 | 🟩🟩🟩🟩🟩 |
-| 5 | **kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit** | 2.20% | 2,816 | 🟩🟩🟩🟩🟩 |
-| 6 | **unsloth/Qwen3.5-27B** | 0.62% | 1,538 | 🟩🟩🟩⬜⬜ |
-| 7 | **unsloth/Qwen3.5-122B-A10B** | 0.62% | 1,538 | 🟩🟩🟩⬜⬜ |
-| 8 | **unsloth/Qwen3.6-35B-A3B** | 0.62% | 1,538 | 🟩🟩🟩⬜⬜ |
-| 9 | **unsloth/Qwen3.6-27B** | 0.62% | 1,538 | 🟩🟩🟩⬜⬜ |
-| 10 | **unsloth/NVIDIA-Nemotron-3-Nano-4B** | 1.15% | 1,507 | 🟩🟩🟩⬜⬜ |
-| 11 | **unsloth/Nemotron-3-Nano-30B-A3B** | 1.15% | 1,507 | 🟩🟩🟩⬜⬜ |
-| 12 | **unsloth/Devstral-Small-2505** | 1.15% | 1,507 | 🟩🟩🟩⬜⬜ |
-| 13 | **unsloth/Magistral-Small-2506** | 1.15% | 1,507 | 🟩🟩🟩⬜⬜ |
-| 14 | **unsloth/Mistral-Medium-3.5-128B** | 1.15% | 1,507 | 🟩🟩🟩⬜⬜ |
-| 15 | **unsloth/Mistral-Small-4-119B-2603** | 1.15% | 1,507 | 🟩🟩🟩⬜⬜ |
-| 16 | **unsloth/Mistral-Small-3.2-24B-Instruct-2506** | 1.15% | 1,507 | 🟩🟩🟩⬜⬜ |
-| 17 | **unsloth/gemma-3-27b-it** | 0.54% | 1,409 | 🟩🟩⬜⬜⬜ |
-| 18 | **unsloth/gemma-4-12b-it** | 0.54% | 1,409 | 🟩🟩⬜⬜⬜ |
-| 19 | **unsloth/gemma-4-12b** | 0.54% | 1,409 | 🟩🟩⬜⬜⬜ |
-| 20 | **unsloth/gemma-4-E2B** | 0.54% | 1,409 | 🟩🟩⬜⬜⬜ |
-| 21 | **unsloth/gemma-4-E4B** | 0.54% | 1,409 | 🟩🟩⬜⬜⬜ |
-| 22 | **unsloth/gemma-4-31B** | 0.54% | 1,409 | 🟩🟩⬜⬜⬜ |
-| 23 | **unsloth/Llama-3.2-3B-Instruct** | 1.08% | 1,378 | 🟩🟩⬜⬜⬜ |
-| 24 | **unsloth/llama-3-8b** | 1.08% | 1,378 | 🟩🟩⬜⬜⬜ |
-| 25 | **unsloth/Llama-3.3-70B-Instruct** | 1.08% | 1,378 | 🟩🟩⬜⬜⬜ |
-| 26 | **unsloth/Llama-3.1-Nemotron-Nano-8B-v1** | 1.08% | 1,378 | 🟩🟩⬜⬜⬜ |
-| 27 | **microsoft/bitnet-b1.58-2B-4T** | 1.08% | 1,378 | 🟩🟩⬜⬜⬜ |
-| 28 | **nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1** | 1.08% | 1,378 | 🟩🟩⬜⬜⬜ |
-| 29 | **HuggingFaceTB/SmolLM3-3B** | 1.08% | 1,378 | 🟩🟩⬜⬜⬜ |
-| 30 | **THUDM/GLM-4.1V-9B-Thinking** | 0.55% | 832 | 🟩⬜⬜⬜⬜ |
-| 31 | **unsloth/Step-3.7-Flash** | 0.49% | 629 | 🟩⬜⬜⬜⬜ |
-| 32 | **unsloth/DeepSeek-R1** | 0.49% | 629 | 🟩⬜⬜⬜⬜ |
-| 33 | **unsloth/DeepSeek-R1-0528** | 0.49% | 629 | 🟩⬜⬜⬜⬜ |
-| 34 | **unsloth/DeepSeek-Prover-V2-671B** | 0.49% | 629 | 🟩⬜⬜⬜⬜ |
-| 35 | **tngtech/DeepSeek-R1T-Chimera** | 0.49% | 629 | 🟩⬜⬜⬜⬜ |
-| 36 | **unsloth/LFM2.5-8B-A1B** | 0.34% | 430 | ⬜⬜⬜⬜⬜ |
-| 37 | **openbmb/MiniCPM4-8B** | 0.19% | 143 | ⬜⬜⬜⬜⬜ |
-| 38 | **Qwen/Qwen3-32B** | 0.08% | 127 | ⬜⬜⬜⬜⬜ |
-| 39 | **Qwen/Qwen3-235B-A22B** | 0.08% | 127 | ⬜⬜⬜⬜⬜ |
-| 40 | **Qwen/Qwen2.5-Omni-3B** | 0.08% | 127 | ⬜⬜⬜⬜⬜ |
-| 41 | **deepseek-ai/DeepSeek-V2.5-1210** | 0.09% | 86 | ⬜⬜⬜⬜⬜ |
-| 42 | **unsloth/mistral-7b-v0.3** | 0.18% | 58 | ⬜⬜⬜⬜⬜ |
-| 43 | **unsloth/Mistral-Small-Instruct-2409** | 0.18% | 58 | ⬜⬜⬜⬜⬜ |
-| 44 | **microsoft/phi-4** | 0.04% | 44 | ⬜⬜⬜⬜⬜ |
-| 45 | **unsloth/granite-4.1-30b** | 0.04% | 44 | ⬜⬜⬜⬜⬜ |
-| 46 | **unsloth/granite-4.1-8b** | 0.04% | 44 | ⬜⬜⬜⬜⬜ |
-| 47 | **unsloth/granite-4.1-30b** | 0.04% | 44 | ⬜⬜⬜⬜⬜ |
-| 48 | **ibm-granite/granite-4.0-tiny-preview** | 0.09% | 42 | ⬜⬜⬜⬜⬜ |
-| 49 | **ibm-granite/granite-3.3-8b-instruct** | 0.09% | 42 | ⬜⬜⬜⬜⬜ |
-| 50 | **ibm-granite/granite-speech-3.3-8b** | 0.09% | 42 | ⬜⬜⬜⬜⬜ |
+| 2 | **ASiatras/Chios_Chatbot** | 45.88% | 28,152 | 🟩🟩🟩🟩🟩 |
+| 3 | **ilsp/Llama-Krikri-8B-Instruct** | 14.88% | 22,212 | 🟩🟩🟩🟩🟩 |
+| 4 | **mlx-community/aya-expanse-32b-8bit** | 2.96% | 7,547 | 🟩🟩🟩🟩🟩 |
+| 5 | **1-800-LLMs/tiny-aya-earth** | 1.77% | 4,622 | 🟩🟩🟩🟩🟩 |
+| 6 | **kyutai/helium-1-2b** | 5.97% | 3,820 | 🟩🟩🟩🟩🟩 |
+| 7 | **kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit** | 2.20% | 2,816 | 🟩🟩🟩🟩🟩 |
+| 8 | **utter-project/EuroMoE-2.6B-A0.6B-2512** | 2.20% | 2,816 | 🟩🟩🟩🟩🟩 |
+| 9 | **unsloth/Qwen3.5-27B** | 0.62% | 1,538 | 🟩🟩🟩⬜⬜ |
+| 10 | **unsloth/Qwen3.5-122B-A10B** | 0.62% | 1,538 | 🟩🟩🟩⬜⬜ |
+| 11 | **unsloth/Qwen3.6-35B-A3B** | 0.62% | 1,538 | 🟩🟩🟩⬜⬜ |
+| 12 | **unsloth/Qwen3.6-27B** | 0.62% | 1,538 | 🟩🟩🟩⬜⬜ |
+| 13 | **unsloth/NVIDIA-Nemotron-3-Nano-4B** | 1.15% | 1,507 | 🟩🟩🟩⬜⬜ |
+| 14 | **unsloth/Nemotron-3-Nano-30B-A3B** | 1.15% | 1,507 | 🟩🟩🟩⬜⬜ |
+| 15 | **unsloth/Devstral-Small-2505** | 1.15% | 1,507 | 🟩🟩🟩⬜⬜ |
+| 16 | **unsloth/Magistral-Small-2506** | 1.15% | 1,507 | 🟩🟩🟩⬜⬜ |
+| 17 | **unsloth/Mistral-Medium-3.5-128B** | 1.15% | 1,507 | 🟩🟩🟩⬜⬜ |
+| 18 | **unsloth/Mistral-Small-4-119B-2603** | 1.15% | 1,507 | 🟩🟩🟩⬜⬜ |
+| 19 | **unsloth/Mistral-Small-3.2-24B-Instruct-2506** | 1.15% | 1,507 | 🟩🟩🟩⬜⬜ |
+| 20 | **unsloth/gemma-3-27b-it** | 0.54% | 1,409 | 🟩🟩⬜⬜⬜ |
+| 21 | **unsloth/gemma-4-12b-it** | 0.54% | 1,409 | 🟩🟩⬜⬜⬜ |
+| 22 | **unsloth/gemma-4-12b** | 0.54% | 1,409 | 🟩🟩⬜⬜⬜ |
+| 23 | **unsloth/gemma-4-E2B** | 0.54% | 1,409 | 🟩🟩⬜⬜⬜ |
+| 24 | **unsloth/gemma-4-E4B** | 0.54% | 1,409 | 🟩🟩⬜⬜⬜ |
+| 25 | **unsloth/gemma-4-31B** | 0.54% | 1,409 | 🟩🟩⬜⬜⬜ |
+| 26 | **unsloth/Llama-3.2-3B-Instruct** | 1.08% | 1,378 | 🟩🟩⬜⬜⬜ |
+| 27 | **unsloth/llama-3-8b** | 1.08% | 1,378 | 🟩🟩⬜⬜⬜ |
+| 28 | **unsloth/Llama-3.3-70B-Instruct** | 1.08% | 1,378 | 🟩🟩⬜⬜⬜ |
+| 29 | **unsloth/Llama-3.1-Nemotron-Nano-8B-v1** | 1.08% | 1,378 | 🟩🟩⬜⬜⬜ |
+| 30 | **microsoft/bitnet-b1.58-2B-4T** | 1.08% | 1,378 | 🟩🟩⬜⬜⬜ |
+| 31 | **nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1** | 1.08% | 1,378 | 🟩🟩⬜⬜⬜ |
+| 32 | **HuggingFaceTB/SmolLM3-3B** | 1.08% | 1,378 | 🟩🟩⬜⬜⬜ |
+| 33 | **THUDM/GLM-4.1V-9B-Thinking** | 0.55% | 832 | 🟩⬜⬜⬜⬜ |
+| 34 | **unsloth/Step-3.7-Flash** | 0.49% | 629 | 🟩⬜⬜⬜⬜ |
+| 35 | **unsloth/DeepSeek-R1** | 0.49% | 629 | 🟩⬜⬜⬜⬜ |
+| 36 | **unsloth/DeepSeek-R1-0528** | 0.49% | 629 | 🟩⬜⬜⬜⬜ |
+| 37 | **unsloth/DeepSeek-Prover-V2-671B** | 0.49% | 629 | 🟩⬜⬜⬜⬜ |
+| 38 | **tngtech/DeepSeek-R1T-Chimera** | 0.49% | 629 | 🟩⬜⬜⬜⬜ |
+| 39 | **unsloth/LFM2.5-8B-A1B** | 0.34% | 430 | ⬜⬜⬜⬜⬜ |
+| 40 | **openbmb/MiniCPM4-8B** | 0.19% | 143 | ⬜⬜⬜⬜⬜ |
+| 41 | **Qwen/Qwen3-32B** | 0.08% | 127 | ⬜⬜⬜⬜⬜ |
+| 42 | **Qwen/Qwen3-235B-A22B** | 0.08% | 127 | ⬜⬜⬜⬜⬜ |
+| 43 | **Qwen/Qwen2.5-Omni-3B** | 0.08% | 127 | ⬜⬜⬜⬜⬜ |
+| 44 | **Loom-Labs/Apollo-1-4B** | 0.08% | 127 | ⬜⬜⬜⬜⬜ |
+| 45 | **deepseek-ai/DeepSeek-V2.5-1210** | 0.09% | 86 | ⬜⬜⬜⬜⬜ |
+| 46 | **unsloth/mistral-7b-v0.3** | 0.18% | 58 | ⬜⬜⬜⬜⬜ |
+| 47 | **unsloth/Mistral-Small-Instruct-2409** | 0.18% | 58 | ⬜⬜⬜⬜⬜ |
+| 48 | **microsoft/phi-4** | 0.04% | 44 | ⬜⬜⬜⬜⬜ |
+| 49 | **unsloth/granite-4.1-30b** | 0.04% | 44 | ⬜⬜⬜⬜⬜ |
+| 50 | **unsloth/granite-4.1-8b** | 0.04% | 44 | ⬜⬜⬜⬜⬜ |
+| 51 | **unsloth/granite-4.1-30b** | 0.04% | 44 | ⬜⬜⬜⬜⬜ |
+| 52 | **ibm-granite/granite-4.0-tiny-preview** | 0.09% | 42 | ⬜⬜⬜⬜⬜ |
+| 53 | **ibm-granite/granite-3.3-8b-instruct** | 0.09% | 42 | ⬜⬜⬜⬜⬜ |
+| 54 | **ibm-granite/granite-speech-3.3-8b** | 0.09% | 42 | ⬜⬜⬜⬜⬜ |
 
 
 ### Latin Support Comparison
@@ -408,32 +432,36 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | 22 | **Qwen/Qwen3-32B** | 61.89% | 93,859 | 🟦🟦🟦🟦🟦 |
 | 23 | **Qwen/Qwen3-235B-A22B** | 61.89% | 93,859 | 🟦🟦🟦🟦🟦 |
 | 24 | **Qwen/Qwen2.5-Omni-3B** | 61.89% | 93,859 | 🟦🟦🟦🟦🟦 |
-| 25 | **kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit** | 71.23% | 91,179 | 🟦🟦🟦🟦🟦 |
-| 26 | **microsoft/phi-4** | 89.33% | 89,643 | 🟦🟦🟦🟦🟦 |
-| 27 | **unsloth/granite-4.1-30b** | 89.33% | 89,643 | 🟦🟦🟦🟦🟦 |
-| 28 | **unsloth/granite-4.1-8b** | 89.33% | 89,643 | 🟦🟦🟦🟦🟦 |
+| 25 | **Loom-Labs/Apollo-1-4B** | 61.89% | 93,859 | 🟦🟦🟦🟦🟦 |
+| 26 | **kaitchup/EuroLLM-9B-Instruct-AutoRound-GPTQ-4bit** | 71.23% | 91,179 | 🟦🟦🟦🟦🟦 |
+| 27 | **utter-project/EuroMoE-2.6B-A0.6B-2512** | 71.23% | 91,179 | 🟦🟦🟦🟦🟦 |
+| 28 | **microsoft/phi-4** | 89.33% | 89,643 | 🟦🟦🟦🟦🟦 |
 | 29 | **unsloth/granite-4.1-30b** | 89.33% | 89,643 | 🟦🟦🟦🟦🟦 |
-| 30 | **unsloth/NVIDIA-Nemotron-3-Nano-4B** | 67.13% | 87,986 | 🟦🟦🟦🟦🟦 |
-| 31 | **unsloth/Nemotron-3-Nano-30B-A3B** | 67.13% | 87,986 | 🟦🟦🟦🟦🟦 |
-| 32 | **unsloth/Devstral-Small-2505** | 67.13% | 87,986 | 🟦🟦🟦🟦🟦 |
-| 33 | **unsloth/Magistral-Small-2506** | 67.13% | 87,986 | 🟦🟦🟦🟦🟦 |
-| 34 | **unsloth/Mistral-Medium-3.5-128B** | 67.13% | 87,986 | 🟦🟦🟦🟦🟦 |
-| 35 | **unsloth/Mistral-Small-4-119B-2603** | 67.13% | 87,986 | 🟦🟦🟦🟦🟦 |
-| 36 | **unsloth/Mistral-Small-3.2-24B-Instruct-2506** | 67.13% | 87,986 | 🟦🟦🟦🟦🟦 |
-| 37 | **unsloth/LFM2.5-8B-A1B** | 69.09% | 86,283 | 🟦🟦🟦🟦🟦 |
-| 38 | **unsloth/Step-3.7-Flash** | 55.82% | 71,454 | 🟦🟦🟦🟦🟦 |
-| 39 | **unsloth/DeepSeek-R1** | 55.82% | 71,454 | 🟦🟦🟦🟦🟦 |
-| 40 | **unsloth/DeepSeek-R1-0528** | 55.82% | 71,454 | 🟦🟦🟦🟦🟦 |
-| 41 | **unsloth/DeepSeek-Prover-V2-671B** | 55.82% | 71,454 | 🟦🟦🟦🟦🟦 |
-| 42 | **tngtech/DeepSeek-R1T-Chimera** | 55.82% | 71,454 | 🟦🟦🟦🟦🟦 |
-| 43 | **deepseek-ai/DeepSeek-V2.5-1210** | 70.49% | 70,489 | 🟦🟦🟦🟦🟦 |
-| 44 | **ibm-granite/granite-4.0-tiny-preview** | 81.99% | 40,302 | 🟦🟦🟦🟦🟦 |
-| 45 | **ibm-granite/granite-3.3-8b-instruct** | 81.99% | 40,302 | 🟦🟦🟦🟦🟦 |
-| 46 | **ibm-granite/granite-speech-3.3-8b** | 81.99% | 40,302 | 🟦🟦🟦🟦🟦 |
-| 47 | **openbmb/MiniCPM4-8B** | 49.57% | 36,406 | 🟦🟦🟦🟦🟦 |
-| 48 | **ilsp/Meltemi-7B-Instruct-v1.5** | 42.28% | 25,948 | 🟦🟦🟦🟦🟦 |
-| 49 | **unsloth/mistral-7b-v0.3** | 78.50% | 25,723 | 🟦🟦🟦🟦🟦 |
-| 50 | **unsloth/Mistral-Small-Instruct-2409** | 78.50% | 25,723 | 🟦🟦🟦🟦🟦 |
+| 30 | **unsloth/granite-4.1-8b** | 89.33% | 89,643 | 🟦🟦🟦🟦🟦 |
+| 31 | **unsloth/granite-4.1-30b** | 89.33% | 89,643 | 🟦🟦🟦🟦🟦 |
+| 32 | **unsloth/NVIDIA-Nemotron-3-Nano-4B** | 67.13% | 87,986 | 🟦🟦🟦🟦🟦 |
+| 33 | **unsloth/Nemotron-3-Nano-30B-A3B** | 67.13% | 87,986 | 🟦🟦🟦🟦🟦 |
+| 34 | **unsloth/Devstral-Small-2505** | 67.13% | 87,986 | 🟦🟦🟦🟦🟦 |
+| 35 | **unsloth/Magistral-Small-2506** | 67.13% | 87,986 | 🟦🟦🟦🟦🟦 |
+| 36 | **unsloth/Mistral-Medium-3.5-128B** | 67.13% | 87,986 | 🟦🟦🟦🟦🟦 |
+| 37 | **unsloth/Mistral-Small-4-119B-2603** | 67.13% | 87,986 | 🟦🟦🟦🟦🟦 |
+| 38 | **unsloth/Mistral-Small-3.2-24B-Instruct-2506** | 67.13% | 87,986 | 🟦🟦🟦🟦🟦 |
+| 39 | **unsloth/LFM2.5-8B-A1B** | 69.09% | 86,283 | 🟦🟦🟦🟦🟦 |
+| 40 | **unsloth/Step-3.7-Flash** | 55.82% | 71,454 | 🟦🟦🟦🟦🟦 |
+| 41 | **unsloth/DeepSeek-R1** | 55.82% | 71,454 | 🟦🟦🟦🟦🟦 |
+| 42 | **unsloth/DeepSeek-R1-0528** | 55.82% | 71,454 | 🟦🟦🟦🟦🟦 |
+| 43 | **unsloth/DeepSeek-Prover-V2-671B** | 55.82% | 71,454 | 🟦🟦🟦🟦🟦 |
+| 44 | **tngtech/DeepSeek-R1T-Chimera** | 55.82% | 71,454 | 🟦🟦🟦🟦🟦 |
+| 45 | **deepseek-ai/DeepSeek-V2.5-1210** | 70.49% | 70,489 | 🟦🟦🟦🟦🟦 |
+| 46 | **kyutai/helium-1-2b** | 88.15% | 56,414 | 🟦🟦🟦🟦🟦 |
+| 47 | **ibm-granite/granite-4.0-tiny-preview** | 81.99% | 40,302 | 🟦🟦🟦🟦🟦 |
+| 48 | **ibm-granite/granite-3.3-8b-instruct** | 81.99% | 40,302 | 🟦🟦🟦🟦🟦 |
+| 49 | **ibm-granite/granite-speech-3.3-8b** | 81.99% | 40,302 | 🟦🟦🟦🟦🟦 |
+| 50 | **openbmb/MiniCPM4-8B** | 49.57% | 36,406 | 🟦🟦🟦🟦🟦 |
+| 51 | **ilsp/Meltemi-7B-Instruct-v1.5** | 42.28% | 25,948 | 🟦🟦🟦🟦🟦 |
+| 52 | **ASiatras/Chios_Chatbot** | 42.28% | 25,945 | 🟦🟦🟦🟦🟦 |
+| 53 | **unsloth/mistral-7b-v0.3** | 78.50% | 25,723 | 🟦🟦🟦🟦🟦 |
+| 54 | **unsloth/Mistral-Small-Instruct-2409** | 78.50% | 25,723 | 🟦🟦🟦🟦🟦 |
 
 
 ### Cross-Language Performance Matrix
@@ -490,6 +518,10 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | **unsloth/granite-4.1-8b** | 9B | 100,352 | 0.04% | 44 | 89.33% | 89,643 | 0.00 |
 | **unsloth/granite-4.1-30b** | 29B | 100,352 | 0.04% | 44 | 89.33% | 89,643 | 0.00 |
 | **1-800-LLMs/tiny-aya-earth** | 3B | 261,000 | 1.77% | 4,622 | 58.80% | 153,473 | 0.03 |
+| **utter-project/EuroMoE-2.6B-A0.6B-2512** | 3B | 128,000 | 2.20% | 2,816 | 71.23% | 91,179 | 0.03 |
+| **kyutai/helium-1-2b** | 2B | 64,000 | 5.97% | 3,820 | 88.15% | 56,414 | 0.07 |
+| **ASiatras/Chios_Chatbot** | 1B | 61,362 | 45.88% | 28,152 | 42.28% | 25,945 | 1.09 |
+| **Loom-Labs/Apollo-1-4B** | 4B | 151,643 | 0.08% | 127 | 61.89% | 93,859 | 0.00 |
 
 
 ### Performance Categories
@@ -507,7 +539,7 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | unsloth/Nemotron-3-Nano-30B-A3B (1.15%) | unsloth/gemma-4-E4B (0.54%) | unsloth/granite-4.1-30b (0.04%) |
 | microsoft/bitnet-b1.58-2B-4T (1.08%) | unsloth/gemma-4-31B (0.54%) | unsloth/granite-4.1-8b (0.04%) |
 | mlx-community/aya-expanse-32b-8bit (2.96%) | unsloth/Step-3.7-Flash (0.49%) | unsloth/granite-4.1-30b (0.04%) |
-| nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1 (1.08%) | unsloth/DeepSeek-R1 (0.49%) |  |
+| nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1 (1.08%) | unsloth/DeepSeek-R1 (0.49%) | Loom-Labs/Apollo-1-4B (0.08%) |
 | unsloth/Devstral-Small-2505 (1.15%) | unsloth/DeepSeek-R1-0528 (0.49%) |  |
 | unsloth/Magistral-Small-2506 (1.15%) | unsloth/DeepSeek-Prover-V2-671B (0.49%) |  |
 | unsloth/Mistral-Medium-3.5-128B (1.15%) | tngtech/DeepSeek-R1T-Chimera (0.49%) |  |
@@ -515,7 +547,9 @@ This report presents a comprehensive analysis of Greek language tokenization cap
 | unsloth/Mistral-Small-3.2-24B-Instruct-2506 (1.15%) | unsloth/mistral-7b-v0.3 (0.18%) |  |
 | HuggingFaceTB/SmolLM3-3B (1.08%) | unsloth/Mistral-Small-Instruct-2409 (0.18%) |  |
 | 1-800-LLMs/tiny-aya-earth (1.77%) | THUDM/GLM-4.1V-9B-Thinking (0.55%) |  |
-|  | unsloth/LFM2.5-8B-A1B (0.34%) |  |
+| utter-project/EuroMoE-2.6B-A0.6B-2512 (2.20%) | unsloth/LFM2.5-8B-A1B (0.34%) |  |
+| kyutai/helium-1-2b (5.97%) |  |  |
+| ASiatras/Chios_Chatbot (45.88%) |  |  |
 
 
 ## Individual Model Analysis
@@ -1971,6 +2005,122 @@ Latin:  █████████████████              58.80%
 
 ---
 
+### utter-project/EuroMoE-2.6B-A0.6B-2512
+
+| Metric | Value | Percentage |
+|--------|-------|------------|
+| **Parameters** | 3B | - |
+| **Total Vocabulary** | 128,000 | 100% |
+| **Greek Tokens** | 2,816 | 2.20% |
+| **Latin Tokens** | 91,179 | 71.23% |
+
+#### Language Distribution
+```
+Greek:                                 2.20%
+Latin:  █████████████████████          71.23%
+```
+
+
+#### Greek Character Statistics
+- **Total Greek Characters**: 
+- **Unique Characters**: 
+- **Most Common**: `` ( times)
+
+
+#### Sample Tokens
+**Greek**: `τ`, `ου`, `π`, `κ`, `σ`...
+
+**Latin**: `A`, `B`, `C`, `D`, `E`...
 
 ---
-*Summary report generated on 2026-06-05 13:52:48 analyzing 50 models*
+
+### kyutai/helium-1-2b
+
+| Metric | Value | Percentage |
+|--------|-------|------------|
+| **Parameters** | 2B | - |
+| **Total Vocabulary** | 64,000 | 100% |
+| **Greek Tokens** | 3,820 | 5.97% |
+| **Latin Tokens** | 56,414 | 88.15% |
+
+#### Language Distribution
+```
+Greek:  █                              5.97%
+Latin:  ██████████████████████████     88.15%
+```
+
+
+#### Greek Character Statistics
+- **Total Greek Characters**: 
+- **Unique Characters**: 
+- **Most Common**: `` ( times)
+
+
+#### Sample Tokens
+**Greek**: `και`, `ς`, `του`, `το`, `της`...
+
+**Latin**: `A`, `B`, `C`, `D`, `E`...
+
+---
+
+### ASiatras/Chios_Chatbot
+
+| Metric | Value | Percentage |
+|--------|-------|------------|
+| **Parameters** | 1B | - |
+| **Total Vocabulary** | 61,362 | 100% |
+| **Greek Tokens** | 28,152 | 45.88% |
+| **Latin Tokens** | 25,945 | 42.28% |
+
+#### Language Distribution
+```
+Greek:  █████████████                  45.88%
+Latin:  ████████████                   42.28%
+```
+
+
+#### Greek Character Statistics
+- **Total Greek Characters**: 
+- **Unique Characters**: 
+- **Most Common**: `` ( times)
+
+
+#### Sample Tokens
+**Greek**: `α`, `ο`, `ν`, `τ`, `ι`...
+
+**Latin**: `A`, `B`, `C`, `D`, `E`...
+
+---
+
+### Loom-Labs/Apollo-1-4B
+
+| Metric | Value | Percentage |
+|--------|-------|------------|
+| **Parameters** | 4B | - |
+| **Total Vocabulary** | 151,643 | 100% |
+| **Greek Tokens** | 127 | 0.08% |
+| **Latin Tokens** | 93,859 | 61.89% |
+
+#### Language Distribution
+```
+Greek:                                 0.08%
+Latin:  ██████████████████             61.89%
+```
+
+
+#### Greek Character Statistics
+- **Total Greek Characters**: 
+- **Unique Characters**: 
+- **Most Common**: `` ( times)
+
+
+#### Sample Tokens
+**Greek**: `α`, ` α`, `ο`, `ι`, `ε`...
+
+**Latin**: `A`, `B`, `C`, `D`, `E`...
+
+---
+
+
+---
+*Summary report generated on 2026-06-08 12:50:31 analyzing 54 models*
